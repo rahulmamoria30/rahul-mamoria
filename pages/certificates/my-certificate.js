@@ -6,7 +6,7 @@ import JavaScriptTopics from "./description/Javascrtipt";
 import style from "./Certificate.module.css";
 import ViewCertificate from "./view-certificate";
 import GoogleCloud from "./description/GoogleCloud";
-import CERTIFICATE_DATA from "./[certificateName]/data";
+import CERTIFICATE_DATA from "@/data/certificate_data";
 const Certificate = () => {
   const [courseVisibility, setCourseVisibility] = useState({
     reactCourse: true,

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import CERTIFICATE_DATA from "./data";
+import CERTIFICATE_DATA from "@/data/certificate_data";
 import { useRouter } from "next/router";
 import style from "./certificateName.module.css"
-export default function CertificateName() {
+ function CertificateName() {
   const router = useRouter();
   const certificate = CERTIFICATE_DATA.find(
     (cert) => cert.route === router.query.certificateName
@@ -22,3 +22,5 @@ export default function CertificateName() {
     </main>
   );
 }
+
+export default CertificateName;

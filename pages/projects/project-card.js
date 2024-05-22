@@ -1,10 +1,10 @@
 // ProjectCard.js
 import Image from "next/image";
 import style from "./projects.module.css";
-import PROJECT_DATA from "./project-data";
+import PROJECT_DATA from "@/data/project_data";
 import Link from "next/link";
 
-export default function ProjectCard() {
+function ProjectCard() {
   const project_name = "software-unit-tesing";
   return (
     <div className={style.project_container}>
@@ -31,3 +31,5 @@ export default function ProjectCard() {
     </div>
   );
 }
+
+export default ProjectCard;
