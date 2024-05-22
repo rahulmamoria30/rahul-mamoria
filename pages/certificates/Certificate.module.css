@@ -1,0 +1,85 @@
+.certificate_heading{
+    text-align: center;
+
+}
+.certificate_section{
+    display: flex;
+    padding: 10px 100px;
+    /* gap: 10px; */
+    /* justify-content: center; */
+}
+.certificate_heading{
+    color: rgb(54, 148, 220);
+}
+.certificate_subheading{
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    background-color: rgb(240, 249, 255);
+    font-style: italic;
+    font-weight: 100;
+}
+.left_buttons{
+    display: flex;
+    flex-direction: column;
+    max-height: 86vh;
+    background-color: rgb(248, 248, 248);
+    /* padding: 10px; */
+    position: relative;
+
+}
+.left_buttons::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 4px; /* Adjust the width of the line as needed */
+    background-color: rgb(54, 148, 220);; /* Adjust the color of the line */
+  }
+.view_ceritidate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 40px;
+    width: 20rem;
+    padding-left: 15px;
+
+
+}
+.view_ceritidate:hover{
+    background-color: rgb(114, 220, 255);
+}
+.course_type{
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    width: 80%;
+    cursor: pointer;
+    /* background-color: rgb(234, 234, 234); */
+  
+}
+.view{
+    text-decoration: none;
+    color: rgb(47, 47, 47);
+}
+.view:hover{
+    color:  rgb(255, 255, 255);
+    cursor: pointer;
+}
+.details_heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+.certificate_details{
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid rgb(42, 176, 221);
+    padding: 10px 40px;
+    background-color: rgb(248, 248, 248);
+    width: 67%;
+    /* text-align: center; */
+    /* border-radius: 10px; */
+}

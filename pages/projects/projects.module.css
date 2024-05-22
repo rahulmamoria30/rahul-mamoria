@@ -1,0 +1,36 @@
+.project_section{
+    text-align: center;
+}
+.project_main_heading{
+    color:  rgb(54, 148, 220);;;
+}
+.project_container{
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.project_card{
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+.view_details{ 
+    margin: 0px 10px;
+
+    padding: 8px 20px;
+    cursor: pointer;
+
+    border-radius: 8px;
+    background-color:  rgb(54, 148, 220);;
+}
+.project_details_link{
+    text-decoration: none;
+    color: #000;
+}
+.view_details:hover{
+    background-color:  rgb(144, 201, 244);
+}

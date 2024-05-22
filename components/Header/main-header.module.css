@@ -1,0 +1,67 @@
+.header {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  font-size: 20px;
+  padding: 10px 100px;
+  border-bottom: 2px solid rgb(54, 148, 220);
+}
+
+.logo_box {
+  padding: 2px;
+}
+.logo {
+  width: 100px;
+  height: 50px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/* Your CSS module file, e.g., Navigation.module.css */
+.navigation_items {
+  display: flex;
+  gap: 30px;
+  text-decoration: none;
+  margin-left: -10rem;
+}
+
+.navigation_item {
+  list-style: none;
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  font-family: "fira sans";
+}
+
+.navigation_item:hover {
+  color: rgb(54, 148, 220);
+}
+
+.active {
+  color: rgb(54, 148, 220);
+  border-bottom: 2px solid rgb(54, 148, 220);
+}
+
+.btn_cv {
+  border: none;
+  color: black;
+  background-color: rgb(54, 148, 220);
+  font-size: 15px;
+  border: 2px solid rgb(54, 148, 220);
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.cv{
+  text-decoration: none;
+  color: black;
+}
+.btn_cv:hover {
+  color: rgb(171, 43, 43); /* Ensure text color remains black on hover */
+ background-color: rgb(146, 203, 247); /* Change border color on hover */
+}
+

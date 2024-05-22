@@ -1,0 +1,32 @@
+.my_skills{
+    margin: 10px 100px;
+}
+.skills_heading{
+    text-align: center;
+}
+.skills_section {
+    display: flex; /* Set display to flex to arrange boxes horizontally */
+    justify-content: center; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+    gap: 20px;
+
+  }
+  
+  .skill_box {
+    max-width: 28%; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .skill_box:hover {
+    box-shadow: 0px 0px 10px rgba(17, 145, 244, 0.3); 
+  transform: translateY(-5px); 
+  transition: all 0.3s ease;
+  }
+  
+  .skill-box h3 {
+    margin-top: 0;
+  }
+  

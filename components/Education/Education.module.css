@@ -1,0 +1,44 @@
+.education_section {
+  background-color: aliceblue;
+  margin: 10px 100px;
+}
+.my_educations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.edu_heading {
+  text-align: center;
+}
+
+.eduction_box {
+  background-color: #f9f9f9;
+  padding-bottom: 20px;
+  height: 22rem;
+}
+
+.grid_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* max-width: 800px;  */
+}
+
+.grid_item {
+  flex-basis: 45%; /* Set initial size of each grid item */
+  margin-bottom: 20px; /* Add margin between grid items */
+}
+
+.eduction_box {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.education_standard {
+  text-align: start;
+}
+.eduction_box:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
