@@ -9,6 +9,7 @@
     justify-content: center; /* Space items evenly */
     flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
     gap: 20px;
+    margin-top: 20px;
 
   }
   

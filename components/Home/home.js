@@ -17,7 +17,7 @@ const Slideshow = ({ images }) => {
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
 
-  return <Image src={images[currentIndex]} alt={`home page image-${images[currentIndex]}`} height={600} width={600} />;
+  return <Image src={images[currentIndex]} alt={`home page image-${images[currentIndex]}`} height={500} width={500} className={style.right_images} />;
 };
 
 // Main HomePage component
@@ -96,9 +96,9 @@ export default function HomePage() {
         <div className={style.home_page_right}>
           <Slideshow
             images={[
-              "/images/img-1.avif",
-              "/images/img-2.avif",
-              "/images/img-4.jpeg",
+              // "/images/img-1.avif",
+              // "/images/img-2.avif",
+              // "/images/img-4.jpeg",
               "/images/img-4.jpeg"
             ]}
           />

@@ -28,6 +28,7 @@ export default function MainHeader() {
 
       <div className={style.navigation}>
         <ul className={style.navigation_items}>
+        <li>
           <Link
             className={`${style.navigation_item} ${
               router.pathname === "/" ? style.active : ""
@@ -36,6 +37,10 @@ export default function MainHeader() {
           >
             Home
           </Link>
+
+        </li>
+          
+          <li>
           <Link
             className={`${style.navigation_item} ${
               router.pathname.startsWith("/about")? style.active : ""
@@ -44,6 +49,10 @@ export default function MainHeader() {
           >
             About me
           </Link>
+
+          </li>
+
+          <li>
           <Link
             className={`${style.navigation_item} ${
               router.pathname.startsWith("/projects") ? style.active : ""
@@ -52,6 +61,10 @@ export default function MainHeader() {
           >
              My Work
           </Link>
+
+          </li>
+
+          <li>
           <Link
             className={`${style.navigation_item} ${
               router.pathname.startsWith("/certificates") ? style.active : ""
@@ -60,7 +73,11 @@ export default function MainHeader() {
           >
             Certifications
           </Link>
+
+          </li>
          
+
+         <li>
           <Link
             className={`${style.navigation_item} ${
               router.pathname.startsWith("/contact-me") ? style.active : ""
@@ -69,6 +86,8 @@ export default function MainHeader() {
           >
             Contact me
           </Link>
+
+         </li>
         </ul>
       </div>
 
