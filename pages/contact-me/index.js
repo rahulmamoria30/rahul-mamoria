@@ -73,7 +73,7 @@ const ContactPage = () => {
                         required
                     />
                 </div>
-                {/* <div className={style.form_group}>
+                <div className={style.form_group}>
                     <label htmlFor="location" className="form-label">Where are you from:</label>
                     <input
                         type="text"
@@ -83,7 +83,7 @@ const ContactPage = () => {
                         className={style.form_input}
                         required
                     />
-                </div> */}
+                </div>
                 <div className={style.form_group}>
                     <label htmlFor="message" className="form-label">Message:</label>
                     <textarea
