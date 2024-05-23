@@ -4,6 +4,7 @@ import HomePage from "@/components/Home/home";
 // import EducationSection from "@/components/Education/education";
 import Footer from "@/components/Footer/Footer";
 import MySkills from "@/components/Skills/MySkills";
+import Experience from "@/components/Experience/Experience";
 export default function Home() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function Home() {
        <HomePage/>
        {/* <EducationSection/> */}
        <MySkills/>
+       <Experience/>
       </main>
     </>
   );
