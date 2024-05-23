@@ -14,7 +14,7 @@ export default function Experience() {
       <div className={styles.experienceContainer}>
         <h1>Full Time</h1>
         <div className={styles.experienceItem}>
-        <div className={styles.company_details}>
+          <div className={styles.company_details}>
             <div className={styles.companyName}>
               <img
                 src="/images/grid-dynamics.png"
@@ -29,10 +29,10 @@ export default function Experience() {
               <p>Location: Hyderabad, India</p>
             </div>
           </div>
- 
           <div className={styles.work_desciption}>
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, omnis eius voluptatem, sed id modi harum suscipit incidunt natus impedit odio dolor, tempora blanditiis accusantium minima quasi consequatur? Quisquam, dicta?</p>
+            <p>
+              As a Software Engineer at Grid Dynamics, I leverage my proficiency in React.js and Next.js to develop dynamic web applications. I excel in creating responsive and interactive user interfaces using JavaScript and have a strong track record in designing and implementing efficient frontend solutions. My ability to craft scalable codebases that adhere to best practices and my collaborative nature have contributed to success in agile development environments.
+            </p>
             <ul>
               <li>
                 Proficient in utilizing React.js and Next.js to develop dynamic
@@ -63,7 +63,7 @@ export default function Experience() {
         <h1>Internships</h1>
         <div className={styles.experienceItem}>
           <div className={styles.company_details}>
-          <div className={styles.companyName}>
+            <div className={styles.companyName}>
               <img
                 src="/images/grid-dynamics.png"
                 alt="Company logo"
@@ -72,13 +72,15 @@ export default function Experience() {
               <h2>Grid Dynamics</h2>
             </div>
             <div className={styles.title}>
-              <p> Position: UI Developer Internship</p>
-              <p>Duraton: Sep, 2023 to March, 2024</p>
-              <p>Loaction: Hyderabad, India</p>
+              <p>Position: UI Developer Internship</p>
+              <p>Duration: Sep, 2023 to March, 2024</p>
+              <p>Location: Hyderabad, India</p>
             </div>
           </div>
           <div className={styles.work_desciption}>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, omnis eius voluptatem, sed id modi harum suscipit incidunt natus impedit odio dolor, tempora blanditiis accusantium minima quasi consequatur? Quisquam, dicta?</p>
+            <p>
+              During my internship as a UI Developer at Grid Dynamics, I gained hands-on experience with JavaScript and React, transforming design concepts into responsive and user-friendly interfaces. I worked on real-time projects, showcasing my ability to contribute effectively in a professional environment.
+            </p>
             <ul>
               <li>
                 Dynamic and driven UI Developer with hands-on experience gained
@@ -93,9 +95,10 @@ export default function Experience() {
             </ul>
           </div>
         </div>
+
         <div className={styles.experienceItem}>
-        <div className={styles.company_details}>
-          <div className={styles.companyName}>
+          <div className={styles.company_details}>
+            <div className={styles.companyName}>
               <img
                 src="/images/flyzy.png"
                 alt="Company logo"
@@ -110,7 +113,9 @@ export default function Experience() {
             </div>
           </div>
           <div className={styles.work_desciption}>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, omnis eius voluptatem, sed id modi harum suscipit incidunt natus impedit odio dolor, tempora blanditiis accusantium minima quasi consequatur? Quisquam, dicta?</p>
+            <p>
+              As a Backend Developer Intern at Flyzy, I focused on creating, maintaining, testing, and debugging the backend of applications and systems. My role involved handling core application logic, databases, data and application integration, APIs, and other backend processes, ensuring smooth and efficient operations behind the scenes.
+            </p>
             <ul>
               <li>
                 Worked as a backend developer intern, creating, maintaining,

@@ -1,5 +1,8 @@
 .about_heading {
   text-align: center;
+  font-size: 30px;
+  color: rgb(0, 137, 241);
+  text-decoration: underline;
 }
 .about_section {
   display: flex;
@@ -8,67 +11,95 @@
   padding: 10px 100px;
   margin-top: 5rem;
   gap: 40px;
+  margin-bottom: 5rem;
+}
+.left_img{
+  border-radius: 10px;
 }
 .left_about_section {
   position: relative;
   left: 0;
   top: 0;
 }
-.image_container {
-  position: absolute;
-  /* margin-top: 20px; */
-  margin-left: 20px;
-}
-.left_img_1 {
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  top: 10rem;
-}
-.left_img_2 {
-  position: absolute;
-  z-index: 8;
-left: 23rem;
-}
-.left_img_3 {
-  position: absolute;
-  z-index: 5;
-  top: 10rem;
-  left: 20rem;
-}
-.left_img_4 {
-  position: absolute;
-  z-index: 1;
-  
-}
 
-.left_img_1:hover,
-.left_img_2:hover,
-.left_img_3:hover {
-  border: 2px solid #007bff; /* Change the color to your preference */
-  border-radius: 5px;
-  z-index: 100;
-  box-shadow: 0px 0px 10px rgba(49, 204, 255, 0.5); /* Change the shadow color and size as needed */
-}
 
 
 .right_about_section {
-  padding: 10px 20px;
-  max-width: 50rem;
-  font-size: 20px;
-  border: 2px solid rgb(54, 148, 220);
+  padding: 0px 20px;
+  /* max-width: 50rem; */
+  font-size: 18px;
+  /* border: 2px solid rgb(54, 148, 220); */
   border-radius: 6px;
+  /* background-color: #9fb4ca; */
+  margin-top: -30px;
+  
+  
 }
-
 .contact_list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .contact_list li {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
+  font-size: 18px; /* Adjust font size */
+}
+.contact_item strong {
+  margin-left: 5px;
+  margin-right: 5px; 
+  color:rgb(0, 137, 241);
+
 }
 
-.contact_list strong {
-  margin-right: 5px;
+.contact_item span {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  color: #333;
+  font-style: italic;
+}
+
+.icon {
+  font-size: 20px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+  color: rgb(0, 137, 241); /* Adjust icon color */
+  height: 20px;
+  width: 20px;
+}
+
+
+.fancy_heading {
+  font-family: 'Poppins', sans-serif; /* Use a fancy font */
+  font-size: 2.5em;
+  font-weight: bold;
+  color: rgb(0, 137, 241);; /* Primary color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.fancy_heading::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color:rgb(0, 137, 241); /* Primary color */
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
+}
+
+.description {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  /* border-left: 3px solid rgb(0, 137, 241);; */
 }

@@ -18,9 +18,9 @@ export default function MainHeader() {
       <div className={style.logo_box}>
         <Image
           className={style.logo}
-          src="/images/Logo-1.png"
+          src="/images/Rahul.png"
           alt="Logo image"
-          width={100}
+          width={300}
           height={100}
           onClick={goToHome}
         />

@@ -37,15 +37,15 @@ const Footer = () => {
         <div className={style.footer_social}>
           <div className={style.footer_logo}>
             <Image
-              src="/images/Logo1.png"
+              src="/images/Rahul.png"
               alt="page logo"
-              width={100}
-              height={70}
+              width={175}
+              height={60}
             />
-          </div>
           <p className={style.footer_social_text}>
           I leverage my creative prowess to design and craft visually engaging user interface pages. Through meticulous attention to detail, I ensure the seamless integration of functionality and aesthetics in every project.
           </p>
+          </div>
 
           <div className={style.footer_social_link}>
             <Link

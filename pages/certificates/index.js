@@ -4,7 +4,7 @@ import style from "./Certificate.module.css"
 const CertificatePage = () => {
   return (
     <div>
-      <h1 className={style.certificate_heading}>My Certificates</h1>
+      {/* <h1 className={style.certificate_heading}>My Certificates</h1> */}
 
       <div className={style.certificate_subheading}>
         Checkout certificates and descriptions

@@ -1,6 +1,8 @@
 .education_section {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   margin: 10px 100px;
+  padding: 20px;
+  border-radius: 10px;
 }
 .my_educations {
   display: flex;
@@ -16,6 +18,23 @@
   padding-bottom: 20px;
   height: 22rem;
 }
+.education_detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: -15px;
+}
+
+.education_description {
+  font-family: "Arial", sans-serif;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  padding-left: 10px;
+   border-left: 3px solid rgb(0, 137, 241);
+}
+
 
 .grid_container {
   display: flex;
@@ -36,9 +55,52 @@
 
 .education_standard {
   text-align: start;
+  color: #333;;
+}
+.standard{
+  font-family: 'Poppins', sans-serif; /* Use a fancy font */
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(33, 34, 34);; /* Primary color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+  margin-bottom: 20px;
+  position: relative;
+}
+.standard::before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color:rgb(37, 37, 37); /* Primary color */
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
+}
+.education_standard::before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color:rgb(0, 137, 241); /* Primary color */
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
 }
 .eduction_box:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
   transition: all 0.3s ease;
+}
+
+.icon {
+  font-size: 40px;
+  height: 50px;
+  width: 50px;
+}
+.edu_icon {
+  height: 20px;
+  width: 20px;
+  color: rgb(0, 137, 241);
 }

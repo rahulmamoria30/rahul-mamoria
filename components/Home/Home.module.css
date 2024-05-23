@@ -1,19 +1,15 @@
 .home_page {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   font-size: 30px;
+  gap: 40px;
   margin: 100px 100px;
   margin-bottom: 120px;
   
 }
 .home_page_left{
-    /* text-align: end; */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-   /* background-color: antiquewhite; */
-    /* width: 30rem; */
 }
 .welcome{
    margin-bottom: -30px;

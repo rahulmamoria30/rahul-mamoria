@@ -1,34 +1,29 @@
 .footer {
  background-color: rgb(240, 249, 255);
-
- margin-top: 14rem;
-
-
 }
 .footer_container {
  display: flex;
  flex-wrap: wrap;
- padding: 0px 40px 0px;
+ padding: 0px 45px 0px;
  gap: 30px;
  border-bottom: 1px solid rgb(178, 178, 178)
 }
 .footer__contact,
 .footer__social,
 .footer__nav {
-  /* padding: 32px 16px; */
   display: flex;
   flex-direction: column;
 }
 .contact_heading{
   color: rgb(54, 148, 220);
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   text-align: right;
 }
 .contact_details h5{
   color:  rgb(88, 88, 88);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 15px;
   text-align: right;
   line-height: 32px;
   margin-top: -10px;
@@ -39,7 +34,11 @@
   margin-top: -30px;
 }
 .footer_logo{
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin-top: 40px;
 }
 .footer_social{
   border-left: 1px solid rgb(134, 134, 134);
@@ -47,11 +46,11 @@
   align-items: center;
   gap: 48px;
   flex-grow: 1;
-  padding:0px 48px;
+  /* padding:0px 48px; */
 }
 .footer_social_text{
   max-width: 49rem;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
 
 }

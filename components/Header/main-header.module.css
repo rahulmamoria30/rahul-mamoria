@@ -6,7 +6,7 @@
   gap: 100px;
   background-color: #ffffff;
   font-size: 20px;
-  padding: 0px 100px;
+  padding: 10px 100px;
   /* border-bottom: 2px solid rgb(54, 148, 220); */
 }
 
@@ -14,8 +14,8 @@
   padding: 2px;
 }
 .logo {
-  width: 100px;
-  height: 50px;
+  width: 175px;
+  height: 60px;
 }
 
 .logo:hover {
