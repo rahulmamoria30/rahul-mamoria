@@ -59,7 +59,7 @@ export default function MainHeader() {
             }`}
             href="/projects"
           >
-             My Work
+             My work
           </Link>
 
           </li>
@@ -71,7 +71,7 @@ export default function MainHeader() {
             }`}
             href="/certificates"
           >
-            Certifications
+            Certificates
           </Link>
 
           </li>
@@ -92,6 +92,7 @@ export default function MainHeader() {
       </div>
 
       <button className={style.btn_cv}>
+      {/* <Link href="/checkout-cv"  className={style.cv} > Checkout CV</Link> */}
         <Link href="https://drive.google.com/file/d/1UfwiHdS_JtouHnGfiGwddse2G8FJcut2/view?usp=sharing" className={style.cv} target="_blank">Checkout CV</Link>
       </button>
     </header>

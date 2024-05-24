@@ -7,7 +7,7 @@
   background-color: #ffffff;
   font-size: 20px;
   padding: 10px 100px;
-  /* border-bottom: 2px solid rgb(54, 148, 220); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo_box {
@@ -27,18 +27,21 @@
   display: flex;
   gap: 30px;
   text-decoration: none;
+  font-weight: 400;
+
 
 }
 
 .navigation_items li{
   list-style: none;
 
+
 }
 .navigation_item {
   list-style: none;
   text-decoration: none;
   font-size: 20px;
-  color: black;
+  color: #333;
   font-family: "fira sans";
 }
 
@@ -69,6 +72,6 @@
   
 }
 .btn_cv:hover {
-  background-color: rgb(87, 182, 255);
+  background-color: #5599e3;
 }
 

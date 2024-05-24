@@ -3,7 +3,7 @@
   justify-content: space-between;
   font-size: 30px;
   gap: 40px;
-  margin: 100px 100px;
+  margin: 50px 100px;
   margin-bottom: 120px;
   
 }
@@ -26,15 +26,24 @@
     margin-right: 10px;
   }
   
+  .name{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+    /* margin-bottom: 20px; */
+  }
 .my_name{
     margin-top: -30px;
-    /* width: 17rem; */
-
+    color: #333;
 }
 .my_description{
     font-size: 18px;
     margin-top: -10px;
     padding-right: 50px;
+    color: #333;
 }
 .displayedText{
    color: rgb(0, 157, 255);
@@ -66,7 +75,8 @@
     margin-top: 30px;
     font-size: 18px;
    font-weight: bold;
-
+   color: #333;
+   text-transform: capitalize;
 }
 
 .social_links{
@@ -97,7 +107,7 @@
   }
   .btn:hover{
     cursor: pointer;
-    background-color: rgb(87, 182, 255);
+    background-color: #5599e3;
   }
   
   @keyframes slideIn {
@@ -125,4 +135,6 @@
     
   }
   
+  
+
   

@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Poppins', sans-serif; 
   background-color: rgb(255, 255, 255);
   position: relative; /* Ensure positioning context for ::before */
 }
@@ -18,14 +18,7 @@ body::before {
   z-index: 10;
 }
 
-.navigation_item {
-  list-style: none;
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-  font-family: "fira sans";
-  
-}
+
 
 .navigation_item:hover {
   color: rgb(54, 148, 220);
@@ -41,6 +34,26 @@ body::before {
     text-align: start;
     align-items: center;
     color: rgb(0, 137, 241);
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    text-transform: capitalize;
     font-size: 40px;
+    position: relative;
+}
+
+.heading::before{
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 5px;
+  background-color:rgb(0, 137, 241); /* Primary color */
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px
+}
+
+
+
+
+.active {
+  background-color: #1890ff; /* Active dot color */
 }

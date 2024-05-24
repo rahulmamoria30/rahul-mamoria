@@ -1,0 +1,25 @@
+.resume_container{
+ text-align: center;
+}
+.resume_heading{
+   display: flex;
+   justify-content: center;
+    color: rgb(0, 137, 241);
+    text-transform: capitalize;
+    font-size: 40px;
+
+}
+.resume_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative; /* Ensure the parent element is positioned */
+  }
+  
+
+.pdf_icon{
+    height: 30px;
+    width: 30px;
+    color:rgb(0, 137, 241); ;
+}
