@@ -1,36 +1,107 @@
 .project_section{
     text-align: center;
 }
+
 .project_main_heading{
-    color:  rgb(54, 148, 220);;;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 137, 241);
+    /* text-decoration: underline; */
+    text-transform: capitalize;
+    font-size: 40px;
+    /* padding-left: 100px; */
+    position: relative;
+}
+.project_heading_container{
+    padding-top: 30px;
+     padding-left: 100px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+.project_icon{
+    height: 40px;
+    width: 40px;
+    color: rgb(0, 137, 241);;
+}
+
+.project_main_heading::before{
+  content: '';
+  position: absolute;
+  height: 5px;
+  background-color:rgb(0, 137, 241); /* Primary color */
+  bottom: -10px;
+  left: -50px;
+  border-radius: 5px;
+  padding-left: 100px;
 }
 .project_container{
     margin-top: 5rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 5rem;
+    padding: 10px 100px;
+
+}
+.project_item{
+    display: flex;
+    gap: 50px;
+}
+.project_name{
+    margin-bottom: -30px;
+    color: #333;
+}
+.project_details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
-    justify-content: center;
+    /* margin-top: 50px; */
 }
-.project_card{
-    border: 2px solid black;
-    display: inline-block;
-    text-align: center;
-    border-radius: 5px;
-    padding-bottom: 15px;
-}
-.view_details{ 
-    margin: 0px 10px;
+.project_description {
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 10px 0;
+    margin-bottom: 0px;
 
-    padding: 8px 20px;
-    cursor: pointer;
+  }
 
-    border-radius: 8px;
-    background-color:  rgb(54, 148, 220);;
-}
-.project_details_link{
+  .project_buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+.source_link{
     text-decoration: none;
-    color: #000;
+    border: none;
+    background-color:rgb(0, 137, 241);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px 15px;
+
 }
-.view_details:hover{
-    background-color:  rgb(144, 201, 244);
+.github_link{
+ text-decoration: none;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    transition: background-color 0.3s ease;
+  
 }
+.source_link:hover{
+    cursor: pointer;
+    background-color: #5599e3;
+}
+
+

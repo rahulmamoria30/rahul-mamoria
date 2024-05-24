@@ -59,7 +59,7 @@ export default function MainHeader() {
             }`}
             href="/projects"
           >
-             My work
+             Projects
           </Link>
 
           </li>

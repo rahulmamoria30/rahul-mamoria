@@ -4,7 +4,8 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif; 
   background-color: rgb(255, 255, 255);
-  position: relative; /* Ensure positioning context for ::before */
+  position: relative;
+
 }
 
 body::before {
