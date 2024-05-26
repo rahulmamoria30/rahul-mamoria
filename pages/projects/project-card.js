@@ -3,6 +3,8 @@ import Image from "next/image";
 import style from "./projects.module.css";
 import Link from "next/link";
 import PROJECT_DATA from "@/data/project_data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 function ProjectCard() {
   return (
@@ -12,14 +14,20 @@ function ProjectCard() {
           <div className={style.project_image}>
             <Image
               src={project.image}
-              height={400}
-              width={700}
+              height={350}
+              width={600}
               alt={project.project_name}
             />
           </div>
 
           <div className={style.project_details}>
-            <h1 className={style.project_name}>{project.project_name}</h1>
+            <h1 className={style.project_name}>
+              <FontAwesomeIcon
+                icon={project.icon}
+                className={style.project_icon}
+              />
+              {project.project_name}
+            </h1>
             <div className={style.project_description}>
               <p>{project.project_detail}</p>
             </div>

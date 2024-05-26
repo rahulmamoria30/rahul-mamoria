@@ -23,7 +23,10 @@
 .project_icon{
     height: 40px;
     width: 40px;
-    color: rgb(0, 137, 241);;
+    /* color: rgb(0, 137, 241); */
+ 
+  
+
 }
 
 .project_main_heading::before{
@@ -51,6 +54,9 @@
     gap: 50px;
 }
 .project_name{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: -30px;
     color: #333;
 }
@@ -68,6 +74,7 @@
     color: #333;
     margin: 10px 0;
     margin-bottom: 0px;
+    padding-left:40px ;
 
   }
 
@@ -75,6 +82,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    padding-left:40px ;
   }
 
 .source_link{

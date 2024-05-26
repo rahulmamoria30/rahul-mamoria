@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import style from "./contact.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-
+import Head from 'next/head';
 const ContactPage = () => {
     const nameRef = useRef(null);
     const emailRef = useRef(null);
@@ -47,6 +47,7 @@ const ContactPage = () => {
     };
 
     return (
+        <>
         <main className={style.contact_page}>
             <h1 className={style.contact_heading}>Please send your warm messages and get in touch</h1>
             <form onSubmit={handleSubmit} className={style.contact_form}>
@@ -126,6 +127,8 @@ const ContactPage = () => {
                 </div>
             </form>
         </main>
+
+        </>
     );
 };
 

@@ -31,6 +31,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    max-width: 500px;
+    min-width: 500px;
+
   }
 .buttons{
   display: flex;
@@ -76,7 +79,7 @@
   }
 
   .input_error {
-    border: 1px solid red; /* Example: Highlighting border color for errors */
+    border: 1px solid red; 
   }
   
   .error_message {
@@ -84,3 +87,4 @@
     font-size: 12px;
     margin-top: 4px;
   }
+  
