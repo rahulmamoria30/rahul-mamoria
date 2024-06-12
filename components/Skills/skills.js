@@ -7,7 +7,7 @@ export default function Skills() {
     <section className={style.skills_section}>
       {skillsData.map((skill, index) => (
         <div key={index} className={style.skill_box} style={{ '--animation-order': index }}>
-        <div>
+        <div className={style.skill_image}>
           <Image src={skill.image} alt={skill.skillName} height={40} width={60} />
           <h3><a href={skill.link} target='_blank' rel="noopener noreferrer">{skill.skillName}</a></h3>
         </div>

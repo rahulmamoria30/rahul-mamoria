@@ -23,7 +23,7 @@
 
 .skills_section {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -35,7 +35,6 @@
   align-items: center;
   gap: 40px;
   padding: 20px;
-
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -45,7 +44,9 @@
   animation: fadeIn 0.5s ease-in-out forwards;
   animation-delay: calc(0.5s * var(--animation-order));
 }
-
+.description{
+  padding: 0;
+}
 .skill_box:hover {
   box-shadow: 0px 0px 10px rgba(17, 145, 244, 0.3);
   transition: all 0.3s ease;
@@ -68,8 +69,7 @@
 }
 
 .skill_box p {
- margin-top: -10px;
-
+  margin-top: -10px;
 }
 
 .skill_box h3 a:hover {
@@ -78,4 +78,28 @@
 
 .skill_box h3 {
   margin-top: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .my_skills {
+    margin: 12px 30px;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .icon {
+    font-size: 25px;
+  }
+  .skill_box {
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 20px;
+    gap: 0px;
+  }
+  .description {
+  margin-top: -100px;
+  }
+  .skill_image{
+    margin-bottom: 0px;
+  }
 }

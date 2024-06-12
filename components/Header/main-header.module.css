@@ -22,7 +22,12 @@
   cursor: pointer;
 }
 
-
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
 .navigation_items {
   display: flex;
   gap: 30px;
@@ -34,7 +39,6 @@
 
 .navigation_items li{
   list-style: none;
-
 
 }
 .navigation_item {
@@ -75,3 +79,16 @@
   background-color: #5599e3;
 }
 
+@media screen and  (max-width:425px) {
+
+  .header {
+    padding: 10px 20px;
+}
+  .navigation{
+    display: none;
+  }
+  .logo {
+    width: 125px;
+    height: 40px;
+  }
+}

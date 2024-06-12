@@ -30,6 +30,7 @@
     display: flex;
     justify-content: start; /* Adjust as needed */
     align-items: flex-start;
+    flex-wrap: wrap;
     margin-bottom: 50px;
     gap: 60px;
     position: relative; /* Ensure position relative for pseudo-element */
@@ -152,4 +153,15 @@
   /* font-size: 30px; */
   height: 40px;
   width: 40px;
+}
+
+
+@media screen and (max-width: 425px) {
+.experienceSection{
+  padding: 20px 30px;
+}
+.icon {
+  height: 25px;
+  width: 25px;
+}
 }

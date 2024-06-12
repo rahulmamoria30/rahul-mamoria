@@ -58,3 +58,15 @@ body::before {
 .active {
   background-color: #1890ff; /* Active dot color */
 }
+
+
+@media screen and  (max-width:425px) {
+  body::before {
+   display: none;
+   
+  }
+  .heading{
+    font-size: 25px;
+  }
+  
+}

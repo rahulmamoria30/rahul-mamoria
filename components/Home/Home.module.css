@@ -1,6 +1,7 @@
 .home_page {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 30px;
   gap: 40px;
   margin: 50px 100px;
@@ -10,6 +11,7 @@
 .home_page_left{
     display: flex;
     flex-direction: column;
+
 }
 .welcome{
    margin-bottom: -30px;
@@ -135,5 +137,37 @@
   }
   
   
+
+
+@media screen and  (max-width:425px) {
+.home_page{
+  margin: 10px 30px;
+}
+.home_page_left{
+  margin-bottom: 10px;
+  
+}
+.my_name{
+  font-size: 25px;
+}
+.my_description{
+  padding-right: 0px;
+  word-wrap: normal;
+
+}
+.right_images{
+
+  height: 365px;
+  width: 365px;
+}
+
+.home_page_left{
+  animation: none
+}
+.home_page_right {
+  animation: none
+
+}
+}
 
   

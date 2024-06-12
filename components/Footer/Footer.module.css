@@ -87,3 +87,10 @@ font-size: 40px;
 .footer_navlinks:hover{
   color: rgb(54, 148, 220);
 }
+
+@media screen and (max-width: 425px) {
+ 
+  .footer_logo{
+    display: none;
+  }
+}

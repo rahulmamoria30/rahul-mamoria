@@ -8,7 +8,7 @@ export default function Experience() {
     <section className={styles.experienceSection}>
       <h1 className="heading">
         <FontAwesomeIcon icon={faBriefcase} className={styles.icon} />
-        Work Experience and Internships
+        Work Experiences
       </h1>
 
       <div className={styles.experienceContainer}>
