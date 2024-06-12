@@ -1,7 +1,7 @@
 .home_page {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   font-size: 30px;
   gap: 40px;
   margin: 50px 100px;
@@ -142,6 +142,7 @@
 @media screen and  (max-width:425px) {
 .home_page{
   margin: 10px 30px;
+  flex-wrap: wrap;
 }
 .home_page_left{
   margin-bottom: 10px;
