@@ -1,39 +1,13 @@
 import { useState, useEffect } from "react";
 import style from "./Home.module.css";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faLinkedin,
-  faFacebook,
-  faTwitter
-} from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Carousel } from "antd";
-
-// Slideshow component
-const Slideshow = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [currentIndex, images.length]);
-
-  return (
-    <Image
-      src={images[currentIndex]}
-      alt={`home page image-${images[currentIndex]}`}
-      height={500}
-      width={500}
-      className={style.right_images}
-    />
-  );
-};
+import Button from "@mui/material/Button";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 export default function HomePage() {
   const router = useRouter();
@@ -54,15 +28,19 @@ export default function HomePage() {
         setTimeout(() => {
           setDisplayedText("");
           setIndex((prevIndex) => (prevIndex + 1) % amI.length);
-        }, 2000); 
+        }, 2000);
       }
-    }, 100); 
+    }, 100);
 
     return () => clearInterval(interval);
   }, [index, displayedText, amI]);
 
-  const goToHome = () => {
+  const goToAbout = () => {
     router.push("/about");
+  };
+
+  const goToContact = () => {
+    router.push("/contact-me");
   };
 
   return (
@@ -76,66 +54,58 @@ export default function HomePage() {
             <span className={style.displayedText}>{displayedText}</span>
           </p>
 
-          <div>
-            <p className={style.my_description}>
-              As a UI developer, I leverage my creative prowess to design and
-              craft visually engaging user interface pages. Through meticulous
-              attention to detail, I ensure the seamless integration of
-              functionality and aesthetics in every project.
-            </p>
+          <p className={style.my_description}>
+            Aspiring and dynamic software engineer seeking to leverage creative and innovative thinking within a growing organization. Committed to enhancing organizational performance while achieving personal professional growth
+          </p>
 
-            <button className={style.btn} onClick={goToHome}>
-              More About Me
-            </button>
-
-            <div>
-              <p className={style.get_in_touch}>Get in touch with</p>
-              <div className={style.social_links}>
-                <Link
-                  className={style.link}
-                  href="https://www.instagram.com/rahul_rm__/"
-                  passHref
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </Link>
-                <Link
-                  className={style.link}
-                  href="https://www.linkedin.com/in/rahulmm07/"
-                  passHref
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </Link>
-                <Link
-                  className={style.link}
-                  href="https://www.facebook.com/rahul.mamoria.7?mibextid=ZbWKwL"
-                  passHref
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faFacebook} />
-                </Link>
-                <Link
-                  className={style.link}
-                  href="https://twitter.com/rahul_rm__?t=ciF-p-3-9-76LLWu02gwwg&s=09"
-                  passHref
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faTwitter} />
-                </Link>
-              </div>
-            </div>
+          <div className={style.more_info}>
+            <Button variant="contained" color="primary" onClick={goToAbout} style={{padding:"7px 20px"}}>
+              About Me
+            </Button>
+            <Button variant="contained" color="secondary" onClick={goToContact} style={{padding:"7px 20px"}}>
+              Hire Me
+            </Button>
           </div>
-        </div>
-        <div className={style.home_page_right}>
-          <Slideshow
-            images={[
-              "/images/img-1.avif",
-              "/images/img-2.avif",
-              "/images/img-4.jpeg",
-              "/images/img-4.jpeg"
-            ]}
-          />
+        
+          <div className={style.social_links}>
+          {/* <span>Social Media Links :</span> */}
+            <Link
+              className={style.link}
+              href="https://www.instagram.com/rahul_rm__/"
+              passHref
+              target="_blank"
+              style={{ color: '#E4405F' }}
+            >
+              <InstagramIcon style={{ fontSize: 40 }} />
+            </Link>
+            <Link
+              className={style.link}
+              href="https://www.linkedin.com/in/rahulmm07/"
+              passHref
+              target="_blank"
+              style={{ color: '#0077B5' }}
+            >
+              <LinkedInIcon style={{ fontSize: 40 }} />
+            </Link>
+            <Link
+              className={style.link}
+              href="https://www.facebook.com/rahul.mamoria.7?mibextid=ZbWKwL"
+              passHref
+              target="_blank"
+              style={{ color: '#1877F2' }}
+            >
+              <FacebookIcon style={{ fontSize: 40 }} />
+            </Link>
+            <Link
+              className={style.link}
+              href="https://twitter.com/rahul_rm__?t=ciF-p-3-9-76LLWu02gwwg&s=09"
+              passHref
+              target="_blank"
+              style={{ color: '#1DA1F2' }}
+            >
+              <TwitterIcon style={{ fontSize: 40 }} />
+            </Link>
+          </div>
         </div>
       </section>
     </main>

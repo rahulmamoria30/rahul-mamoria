@@ -10,9 +10,7 @@ export default function MySkills() {
                 <FontAwesomeIcon icon={faCode} className={style.icon} /> My technical skills
             </h1>
             <p className={style.introduction}>
-                Over the years, I have acquired a diverse set of skills through both my academic and professional experiences. 
-                During my college years, I developed a strong foundation in various programming languages and technologies.
-                My professional journey further honed these skills and introduced me to new tools and best practices.
+            Over the years, I've gained a robust skill set through my academic and professional journey. My college years provided a strong foundation in programming languages and technologies, which I've enhanced and expanded upon in my professional career.
                 Below is a comprehensive list of my technical skills.
             </p>
             <Skills/>

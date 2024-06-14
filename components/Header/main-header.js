@@ -9,10 +9,6 @@ export default function MainHeader() {
   function goToHome() {
     router.push("/");
   }
-
-  function handleResumeButton(){
-
-  }
   return (
     <header className={style.header}>
       <div className={style.logo_box}>

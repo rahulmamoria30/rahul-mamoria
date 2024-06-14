@@ -8,7 +8,7 @@ export default function Skills() {
       {skillsData.map((skill, index) => (
         <div key={index} className={style.skill_box} style={{ '--animation-order': index }}>
         <div className={style.skill_image}>
-          <Image src={skill.image} alt={skill.skillName} height={40} width={60} />
+          <Image src={skill.image} alt={skill.skillName} height={40} width={40}  className={style.skillImage}/>
           <h3><a href={skill.link} target='_blank' rel="noopener noreferrer">{skill.skillName}</a></h3>
         </div>
           <p>{skill.description}</p>
