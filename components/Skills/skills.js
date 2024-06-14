@@ -5,6 +5,7 @@ import Image from 'next/image';
 export default function Skills() {
   return (
     <section className={style.skills_section}>
+    
       {skillsData.map((skill, index) => (
         <div key={index} className={style.skill_box} style={{ '--animation-order': index }}>
         <div className={style.skill_image}>

@@ -8,6 +8,10 @@
   font-size: 20px;
   padding: 10px 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+z-index: 1;
 }
 
 .logo_box {
@@ -45,17 +49,39 @@
   text-decoration: none;
   font-size: 18px;
   color: #333;
-  font-family: "fira sans";
+  font-family: "Fira Sans";
+  position: relative;
+  display: inline-block;
 }
 
-.active {
-  background-color: rgb(0, 137, 241);
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 18px;
-  /* border-bottom: 2px solid rgb(0, 137, 241); */
+.navigation_item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #333;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
 }
+
+.navigation_item:hover::after,
+.navigation_item.active::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.navigation_item:hover {
+  color: #333;
+}
+
+.navigation_item.active {
+  color: #333;
+}
+
 
 .btn_cv {
   border: none;

@@ -62,7 +62,7 @@ export default function HomePage() {
             <Button variant="contained" color="primary" onClick={goToAbout} style={{padding:"7px 20px"}}>
               About Me
             </Button>
-            <Button variant="contained" color="secondary" onClick={goToContact} style={{padding:"7px 20px"}}>
+            <Button variant="contained" color="primary" onClick={goToContact} style={{padding:"7px 20px"}}>
               Hire Me
             </Button>
           </div>
