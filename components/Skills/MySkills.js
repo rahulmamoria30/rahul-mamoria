@@ -7,7 +7,7 @@ export default function MySkills() {
     return (
         <main className={style.my_skills}> 
             <h1 className="heading">
-                <FontAwesomeIcon icon={faCode} className={style.icon} /> My technical skills
+                <FontAwesomeIcon icon={faCode} className={style.icon} /> technical skills
             </h1>
             <p className={style.introduction}>
             Over the years, I've gained a robust skill set through my academic and professional journey. My college years provided a strong foundation in programming languages and technologies, which I've enhanced and expanded upon in my professional career.

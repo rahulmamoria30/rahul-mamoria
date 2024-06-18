@@ -2,7 +2,7 @@
 
 const experienceData = [
     {
-      type: 'Full Time',
+      type: 'Junior Software Engineer - Grid Dynamics',
       company: 'Grid Dynamics',
       logo: '/images/grid-dynamics.png',
       title: 'Software Engineer',
@@ -17,7 +17,7 @@ const experienceData = [
       ]
     },
     {
-      type: 'Internships',
+      type: 'UI Developemet Intenship - Grid Dynamics',
       company: 'Grid Dynamics',
       logo: '/images/grid-dynamics.png',
       title: 'UI Developer Intern',
@@ -31,7 +31,7 @@ const experienceData = [
       ]
     },
     {
-      type: 'Internships',
+      type: 'Backend Developemet Internship - Flyzy',
       company: 'Flyzy',
       logo: '/images/flyzy.png',
       title: 'Backend Developer Intern',

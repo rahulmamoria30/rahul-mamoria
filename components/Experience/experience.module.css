@@ -1,159 +1,69 @@
 .experienceSection {
-    padding: 20px 100px;
- 
-    font-family: Arial, sans-serif;
+  padding: 40px 100px;
+  background-color: #1a1a1a;
 }
 
-.experienceSection h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    /* font-size: 30px; */
+.experience{
+  padding: 30px 0px; 
 }
-
 .experienceContainer {
-    margin-bottom: 30px;
-    color: #333;
-    
+  /* margin-top: 30px; */
+  margin-bottom: 15px;
 }
 
-
-
+.dropdownHeader {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
 .experienceItem {
-    display: flex;
-    justify-content: start; /* Adjust as needed */
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    gap: 60px;
-    position: relative; /* Ensure position relative for pseudo-element */
-  }
-  
-  .experienceItem::after {
-    content: "";
-    position: absolute;
-    bottom: -30px; /* Adjust this value to control the distance from the bottom */
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid black; /* Example border style */
-  }
-.experienceItem ul {
-    margin: 10px 0 0 0;
-    padding: 0 0 0 20px;
-    list-style-type: disc;
-    color: #555; /* Adjusted color */
-    line-height: 1.5; /* Adjusted line height */
-  }
-  
-  .experienceItem ul li {
-    margin-bottom: 8px; /* Increased margin between list items */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  /* background-color: antiquewhite; */
+}
+
 .company_details {
-    /* other styles */
-    padding: 20px;
-    /* padding-right: 30px; */
-    /* background-color:rgb(121, 193, 248); */
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
-  }
-  
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  /* background-color: antiquewhite; */
+}
+
+.companyName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .companyLogo {
-    width: 30px;
-    height: 30px;
-    /* margin-right: 20px; */
+  width: 30px;
+  height: 30px;
 }
-.companyName{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
+
+.company_title {
+  margin-left: auto;
+  text-align: right;
+  display: flex;
+  gap: 20px;
+}
+
+.work_desciption {
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  line-height: 30px;
  
-  
-  
-}
-.title{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  padding: 20px;
 }
 
-.experienceItem h2 {
-    margin: 0;
-    /* font-size: 20px; */
-    color: #1f1f1f;
+
+.work_desciption ul {
+  margin: 0;
+  padding-left: 20px;
 }
 
-.experienceItem p {
-    margin: 5px 0;
-    color: #272727;
-}
 
-.experienceItem ul {
-    margin: 10px 0 0 0;
-    padding: 0 0 0 20px;
-    list-style-type: disc;
-    color: #555;
-}
-
-.experienceItem ul li {
-    margin-bottom: 5px;
-}
-.work_desciption{
-    max-width: 55rem;
-    color: #333;
-}
-
-.work_desciption p {
-    margin-bottom: 10px; 
-    line-height: 1.6; 
-    position: relative; 
-    font-weight: 600;
-  }
-  
-  .work_desciption p::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -10px; /* Adjust this value to control the distance from the left */
-    height: 100%;
-    width: 3px;
-    background-color: rgb(0, 137, 241); /* Example border color */
-  }
-
-  
-  .work_desciption ul {
-    margin-bottom: 0; /* Example margin bottom for unordered list */
-  }
-  
-  .work_desciption li {
-    margin-bottom: 5px; /* Example margin bottom for list items */
-  }
-  
-  .work_desciption ul {
-    margin-bottom: 0; /* Example margin bottom for unordered list */
-  }
-  
-  .work_desciption li {
-    margin-bottom: 5px; /* Example margin bottom for list items */
-  }
-.icon {
-  margin-right: 10px;
-  color: rgb(0, 137, 241);
-  /* font-size: 30px; */
+.icon{
   height: 40px;
-  width: 40px;
-}
-
-
-@media screen and (max-width: 425px) {
-.experienceSection{
-  padding: 20px 30px;
-}
-.icon {
-  height: 25px;
-  width: 25px;
-}
+  width: 35px;
 }
