@@ -17,8 +17,9 @@ import {
   faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import Hobbies from "@/components/Hobbies/Hobbies";
 export default function AboutPage() {
   const [expandedAboutMe, setExpandedAboutMe] = useState(true);
   const [expandedProfessionalJourney, setExpandedProfessionalJourney] = useState(true);
@@ -26,27 +27,27 @@ export default function AboutPage() {
   const [expandedPassionAspirations, setExpandedPassionAspirations] = useState(true);
   const [expandedGetInTouch, setExpandedGetInTouch] = useState(true);
 
-  const handleAccordionChange = (panel) => (event, isExpanded) => {
-    switch (panel) {
-      case 'aboutMe':
-        setExpandedAboutMe(isExpanded);
-        break;
-      case 'professionalJourney':
-        setExpandedProfessionalJourney(isExpanded);
-        break;
-      case 'currentRole':
-        setExpandedCurrentRole(isExpanded);
-        break;
-      case 'passionAspirations':
-        setExpandedPassionAspirations(isExpanded);
-        break;
-      case 'getInTouch':
-        setExpandedGetInTouch(isExpanded);
-        break;
-      default:
-        break;
-    }
-  };
+  // const handleAccordionChange = (panel) => (event, isExpanded) => {
+  //   switch (panel) {
+  //     case 'aboutMe':
+  //       setExpandedAboutMe(isExpanded);
+  //       break;
+  //     case 'professionalJourney':
+  //       setExpandedProfessionalJourney(isExpanded);
+  //       break;
+  //     case 'currentRole':
+  //       setExpandedCurrentRole(isExpanded);
+  //       break;
+  //     case 'passionAspirations':
+  //       setExpandedPassionAspirations(isExpanded);
+  //       break;
+  //     case 'getInTouch':
+  //       setExpandedGetInTouch(isExpanded);
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
   return (
     <>
@@ -56,7 +57,7 @@ export default function AboutPage() {
             <Image
               src="/images/my-image.jpeg"
               className={style.left_img}
-              height={600}
+              height={580}
               width={400}
             />
           </div>
@@ -64,15 +65,10 @@ export default function AboutPage() {
             <Image
               src="/images/my-image-2.jpeg"
               className={style.left_img}
-              height={600}
+              height={580}
               width={400}
             />
           </div>
-          
-        
-
-          
-          
         </div>
       <div className={style.right_about_section}>
           <h2 className={style.fancy_heading}>Rahul Mamoria</h2>
@@ -102,8 +98,7 @@ export default function AboutPage() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" className={style.description}>
-                Hello! I'm a junior software engineer at Grid Dynamics, passionate about crafting intuitive and efficient software solutions. Originally from Jaipur, I bring a blend of creativity and technical prowess to my work.
-              </Typography>
+              Hello! I'm a junior software engineer at Grid Dynamics. I love creating software that is easy to use and works well. I'm originally from Jaipur, and I bring both creativity and technical skills to my work.              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -119,8 +114,7 @@ export default function AboutPage() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" className={style.description}>
-                I embarked on my journey into software engineering after completing my graduation from <strong>National Institute of Technology, Calicut</strong> . My career has been marked by a strong foundation in frontend development, where I've successfully delivered impactful projects. These experiences have sharpened my skills in creating user-friendly interfaces that marry aesthetic appeal with functionality.
-              </Typography>
+              I started my journey into software engineering after graduating from the <strong>National Institute of Technology, Calicut</strong> . My career has focused on Software development, where I've completed important projects. These experiences have helped me create user-friendly interfaces that look good and work well.              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -136,8 +130,7 @@ export default function AboutPage() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1" className={style.description}>
-                At Grid Dynamics, I'm immersed in leveraging cutting-edge technologies to solve real-world challenges. I thrive in collaborative environments, where I contribute to designing and implementing solutions that enhance user experiences and streamline processes.
-              </Typography>
+              At Grid Dynamics, I'm heavily involved in using advanced technologies to solve real-life problems directly. I really enjoy working with others to create solutions that make things easier for users and make our work processes smoother. I love using technology to come up with new ideas and find better ways to make our software even better.              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -224,6 +217,9 @@ export default function AboutPage() {
 
         
       <EducationSection />
+      <Hobbies/>
+
+
     </>
   );
 }

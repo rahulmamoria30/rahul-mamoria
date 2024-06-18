@@ -67,3 +67,10 @@
   height: 40px;
   width: 35px;
 }
+
+
+@media screen and (max-width:425px){
+  .experienceSection{
+    padding: 10px 30px;
+  }
+}

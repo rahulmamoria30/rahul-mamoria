@@ -8,16 +8,16 @@ body {
   position: relative;
 }
 
-/* body::before {
+body::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 40px; 
+  width: 30px; 
   background-color: rgb(0, 137, 241);
   z-index: 10;
-} */
+}
 
 
 

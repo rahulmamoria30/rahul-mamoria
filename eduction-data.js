@@ -19,7 +19,7 @@ const Eduction_details = [
     standard: "IIT JEE Preparation",
     school_name: "Matrix JEE Academy, Sikar, Rajasthan",
     year: "Passout year : 2019",
-    grade: "Result : Got NIT Calicut",
+    grade: "Result : 97.60 Percentile",
     description:
       "In 2018-2019, I attended Matrix JEE Academy, Sikar, for IIT JEE preparation. My dedication and the excellent guidance from my mentors led to my selection at NIT Calicut, a significant milestone in my academic journey."
   },

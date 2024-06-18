@@ -1,7 +1,9 @@
-import style from "./Education.module.css";
-import Eduction_details from "@/eduction-data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSchool, faCalendarAlt, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSchool, faCalendarAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import Eduction_details from '@/eduction-data';
+import style from './Education.module.css';
 
 export default function EducationComponent() {
   return (
@@ -10,26 +12,33 @@ export default function EducationComponent() {
         <div className={style.grid_container}>
           {Eduction_details.map((education, index) => (
             <div key={index} className={style.grid_item}>
-              <div className={style.education_box}>
-                <div className={style.education_standard}>
-                  <h2 className={style.standard}>{education.standard}</h2>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls={`panel${index}-content`}
+                  id={`panel${index}-header`}
+                >
+                  <Typography className={style.standard}>{education.standard}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
                   <div className={style.education_detail}>
                     <FontAwesomeIcon icon={faSchool} className={style.edu_icon} />
-                    <p>{education.school_name}</p>
+                    <Typography>{education.school_name}</Typography>
                   </div>
                   <div className={style.education_detail}>
                     <FontAwesomeIcon icon={faCalendarAlt} className={style.edu_icon} />
-                    <p>{education.year}</p>
+                    <Typography>{education.year}</Typography>
                   </div>
                   <div className={style.education_detail}>
                     <FontAwesomeIcon icon={faGraduationCap} className={style.edu_icon} />
-                    <p>{education.grade}</p>
+                    <Typography>{education.grade}</Typography>
                   </div>
+                  
                   <div className={style.education_description}>
-                    {education.description}
+                    <Typography>{education.description}</Typography>
                   </div>
-                </div>
-              </div>
+                </AccordionDetails>
+              </Accordion>
             </div>
           ))}
         </div>

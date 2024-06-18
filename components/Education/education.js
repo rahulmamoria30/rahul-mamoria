@@ -14,4 +14,5 @@ export default function EducationSection() {
       </div>
     </main>
   );
+  
 }

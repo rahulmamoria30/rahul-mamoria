@@ -8,9 +8,9 @@
 .left_about_section{
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
-  gap: 20px;
-  align-items: space-around;
+  justify-content: space-around;
+  gap: 30px;
+  /* align-items: space-around; */
 
 }
 
@@ -19,15 +19,19 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .right_about_section {
   flex: 1;
   cursor:default;
-  padding: 0px 20px;
+  padding: 0px 10px;
   font-size: 18px;
   border-radius: 6px;
+  /* display: flex;
+  flex-direction: column; */
 /* background-color: antiquewhite; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
 
 .fancy_heading {
   font-family: "Poppins", sans-serif;
