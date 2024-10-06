@@ -1,63 +1,73 @@
 import React from 'react';
 import { Business, Event, LocationOn, KeyboardArrowDown } from '@mui/icons-material';
 import { Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import styles from './experience.module.css';
 import experienceData from '@/data/experience-data';
 
 export default function Experience() {
   return (
-    <section className={styles.experienceSection}>
-    <h1 className="heading">
-    <Business className={styles.icon} />  work experiences
-            </h1>
-   
+    <section className="py-10 px-4 font-boska">
+      <h1 className="text-gray-100 text-4xl md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16">
+        Work Experiences
+      </h1>
 
-<div className={styles.experience}>
-      {experienceData.map((experience, index) => (
-        <Accordion key={index} className={styles.experienceContainer}>
-          <AccordionSummary
-            expandIcon={<KeyboardArrowDown />}
-            aria-controls={`panel${index}-content`}
-            id={`panel${index}-header`}
-            className={styles.dropdownHeader}
+      <div className="space-y-4">
+        {experienceData.map((experience, index) => (
+          <Accordion
+            key={index}
+            className="border rounded-lg"
+            defaultExpanded={index === 0} // Keep the first accordion expanded by default
           >
-            <Typography>{experience.type}</Typography>
-          </AccordionSummary>
-          <AccordionDetails className={styles.experienceItem}>
-            <div className={styles.company_details}>
-              <div className={styles.companyName}>
-                <img
-                  src={experience.logo}
-                  alt="Company logo"
-                  className={styles.companyLogo}
-                />
-                <Typography variant="h6">{experience.company}</Typography>
+            <AccordionSummary
+              expandIcon={<KeyboardArrowDown />}
+              aria-controls={`panel${index}-content`}
+              id={`panel${index}-header`}
+              className="bg-gray-100 dark:bg-gray-700"
+            >
+              <Typography className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                {experience.type}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails className="p-4 bg-white dark:bg-gray-800">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
+                <div className="flex items-center mb-4 md:mb-0">
+                  <img
+                    src={experience.logo}
+                    alt="Company logo"
+                    className="h-12 w-12 rounded-full mr-4"
+                  />
+                  <Typography
+                    variant="h6"
+                    className="text-2xl font-semibold text-gray-800 dark:text-gray-200"
+                  >
+                    {experience.company}
+                  </Typography>
+                </div>
+                <div className="text-gray-600 dark:text-gray-300 space-y-2">
+                  <Typography className="flex items-center gap-2">
+                    <Business fontSize="small" /> {experience.title}
+                  </Typography>
+                  <Typography className="flex items-center gap-2">
+                    <Event fontSize="small" /> {experience.date}
+                  </Typography>
+                  <Typography className="flex items-center gap-2">
+                    <LocationOn fontSize="small" /> {experience.location}
+                  </Typography>
+                </div>
               </div>
-              <div className={styles.company_title}>
-                <Typography style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                  <Business fontSize="small" /> {experience.title}
+              <div>
+                <Typography className="text-gray-700 dark:text-gray-300">
+                  {experience.description}
                 </Typography>
-                <Typography style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                  <Event fontSize="small" /> {experience.date}
-                </Typography>
-                <Typography style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                  <LocationOn fontSize="small" /> {experience.location}
-                </Typography>
+                <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-300 text-xl">
+                  {experience.responsibilities.map((responsibility, idx) => (
+                    <li key={idx}>{responsibility}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
-            <div className={styles.work_desciption}>
-              <Typography>{experience.description}</Typography>
-              <ul>
-                {experience.responsibilities.map((responsibility, idx) => (
-                  <li key={idx}>{responsibility}</li>
-                ))}
-              </ul>
-            </div>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-
-</div>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </div>
     </section>
   );
 }

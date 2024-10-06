@@ -1,58 +1,46 @@
+import {
+  Code2,
+  Palette,
+  Lightbulb,
+  Rocket,
+  Database,
+  Globe,
+} from "lucide-react"; // Import icons from Lucide or any other icon library
+
 const skillsData = [
   {
-    skillName: 'React.js',
-    link: 'https://react.dev/learn',
-    description: 'JavaScript library for building user interfaces, known for its efficiency and reusable components.',
-    image: '/images/react.svg'
+    name: "Programming Languages",
+    icon: <Globe className="h-8 w-8" />,
+    description: "Java, JavaScript, C/C++",
   },
   {
-    skillName: 'Next.js',
-    link: 'https://nextjs.org/',
-    description: 'React framework for building production-ready applications with server-side rendering and static site generation.',
-    image: '/images/nextjs.png'
+    name: "Frontend Developement",
+    icon: <Code2 className="h-8 w-8" />,
+    description: "HTML, CSS, JavaScript, React, Next.js",
   },
   {
-    skillName: 'JavaScript',
-    link: 'https://www.javascript.com/',
-    description: 'Versatile programming language for web development, known for its dynamic and interactive capabilities.',
-    image: '/images/javascript.svg'
+    name: "Backend Developement",
+    icon: <Code2 className="h-8 w-8" />,
+    description: "Nodejs, Express, Java, Spring Boot",
   },
   {
-    skillName: 'TypeScript',
-    link: 'https://www.typescriptlang.org/',
-    description: 'Superset of JavaScript that adds static typing and enhances code maintainability and scalability.',
-    image: '/images/typescript.png'
+    name: "Database Management",
+    icon: <Database className="h-8 w-8" />,
+    description: "SQL, MongoDB",
   },
   {
-    skillName: 'C++',
-    link: 'https://cplusplus.com/doc/tutorial/',
-    description: 'Powerful programming language for system/software development, game development, and more.',
-    image: '/images/cpp.png'
+    name: "UI/UX Design",
+    icon: <Palette className="h-8 w-8" />,
+    description: "Figma",
   },
   {
-    skillName: 'HTML/CSS',
-    link: 'https://learnhtmlcss.online/app.html',
-    description: 'Fundamental languages for creating the structure and style of web pages, essential in web development.',
-    image: '/images/htmlcss.png'
+    name: "Problem Solving",
+    icon: <Lightbulb className="h-8 w-8" />,
+    description: "Solved 600+ DSA Questions",
   },
-  {
-    skillName: 'Node.js',
-    link: 'https://nodejs.org/en',
-    description: 'JavaScript runtime built on Chrome\'s V8 engine, used for scalable and high-performance network applications.',
-    image: '/images/nodejs.png'
-  },
-  {
-    skillName: 'Express.js',
-    link: 'https://expressjs.com/',
-    description: 'Minimal and flexible Node.js web application framework for building robust web and mobile applications.',
-    image: '/images/expressjs.png'
-  },
-  {
-    skillName: 'MongoDB',
-    link: 'https://www.w3schools.com/mongodb/',
-    description: 'NoSQL database management system using a document-oriented data model.',
-    image: '/images/mongodb.svg'
-  }
+ 
+ 
+  
 ];
 
 export default skillsData;

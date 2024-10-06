@@ -1,135 +1,44 @@
 import React from "react";
-import style from "./Footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faLinkedin,
   faFacebook,
-  faTwitter
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const router =useRouter();
   return (
-    <footer className={style.footer}>
-      <div className={style.footer_container}>
-        <div className={style.footer_contact}>
-          <h3 className={style.contact_heading}>Contact Me</h3>
-          <div className={style.contact_details}>
-            <h5>Email : </h5>
-            <p className={style.contact_text}>rahulmamoria@gmail.com</p>
-          </div>
-          <div className={style.contact_details}>
-            <h5>Phone Number : </h5>
-            <p className={style.contact_text}>+91 7690898460</p>
-          </div>
-          <div className={style.contact_details}>
-            <h5>Address</h5>
-            <p className={style.contact_text}>
-              Viratnagar, Jaipur, Rajasthan, India
-            </p>
-          </div>
-        </div>
+    <footer className="bg-sky-100 py-4">
+      
 
-        <div className={style.footer_social}>
-          <div className={style.footer_logo}>
-            <Image
-              src="/images/Rahul.png"
-              alt="page logo"
-              width={175}
-              height={60}
-            />
-          <p className={style.footer_social_text}>
-          I leverage my creative prowess to design and craft visually engaging user interface pages. Through meticulous attention to detail, I ensure the seamless integration of functionality and aesthetics in every project.
+        <div className="flex flex-col items-center flex-grow border-l border-r border-gray-500 gap-12 mt-10">
+        
+          <p className="max-w-4xl text-sm text-center">
+            I leverage my creative prowess to design and craft visually engaging user interface pages, ensuring the seamless integration of functionality and aesthetics in every project.
           </p>
-          </div>
 
-          <div className={style.footer_social_link}>
-            <Link
-              className={style.social_link}
-              href="https://www.instagram.com/rahul_rm__/"
-              passHref
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
+          <div className="flex items-center justify-center gap-5">
+            <Link href="https://www.instagram.com/rahul_rm__/" target="_blank">
+              <FontAwesomeIcon icon={faInstagram} className="text-gray-500 text-2xl hover:text-sky-600" />
             </Link>
-            <Link
-              className={style.social_link}
-              href="https://www.linkedin.com/in/rahulmm07/"
-              passHref
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
+            <Link href="https://www.linkedin.com/in/rahulmm07/" target="_blank">
+              <FontAwesomeIcon icon={faLinkedin} className="text-gray-500 text-2xl hover:text-sky-600" />
             </Link>
-            <Link
-              className={style.social_link}
-              href="https://www.facebook.com/rahul.mamoria.7?mibextid=ZbWKwL"
-              passHref
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faFacebook} />
+            <Link href="https://www.facebook.com/rahul.mamoria.7?mibextid=ZbWKwL" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} className="text-gray-500 text-2xl hover:text-sky-600" />
             </Link>
-            <Link
-              className={style.social_link}
-              href="https://twitter.com/rahul_rm__?t=ciF-p-3-9-76LLWu02gwwg&s=09"
-              passHref
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
+            <Link href="https://twitter.com/rahul_rm__?t=ciF-p-3-9-76LLWu02gwwg&s=09" target="_blank">
+              <FontAwesomeIcon icon={faTwitter} className="text-gray-500 text-2xl hover:text-sky-600" />
             </Link>
           </div>
-
-          <div className={style.copyrights}>@Copyrights - Rahul Mamoria</div>
         </div>
 
-        <div className={style.footer__nav}>
-        <h3 className={style.contact_heading}>Checkout Links</h3>
-        <Link
-            className={`${style.footer_navlinks} ${
-              router.pathname === "/" ? style.active : ""
-            }`}
-            href="/"
-          >
-          Home Page
-          </Link>
-        <Link
-            className={`${style.footer_navlinks} ${
-              router.pathname === "/about" ? style.active : ""
-            }`}
-            href="/about"
-          >
-            About me
-          </Link>
-          <Link
-            className={`${style.footer_navlinks} ${
-              router.pathname === "/projects" ? style.active : ""
-            }`}
-            href="/projects"
-          >
-            Projects
-          </Link>
-          <Link
-            className={`${style.footer_navlinks} ${
-              router.pathname === "/certificates" ? style.active : ""
-            }`}
-            href="certificates/"
-          >
-            Certifications
-          </Link>
-          <Link
-            className={`${style.footer_navlinks} ${
-              router.pathname === "/experience" ? style.active : ""
-            }`}
-            href="/experience"
-          >
-            Work Experiences
-          </Link>
-         
-        </div>
-      </div>
+    
+
+      <div className="text-center mt-5">&copy; Copyright 2024 - Rahul Mamoria</div>
     </footer>
   );
 };

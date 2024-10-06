@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import MainHeader from './components/Header/main-header';
 import Footer from '@/components/Footer/Footer';
+import AboutPage from './pages/about';
 
 const getPageTitle = (route) => {
   switch (route) {
@@ -34,7 +35,9 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <MainHeader />
+    
       <main>{children}</main>
+
       <Footer />
     </>
   );

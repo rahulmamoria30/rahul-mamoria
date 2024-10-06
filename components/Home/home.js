@@ -1,113 +1,99 @@
-import { useState, useEffect } from "react";
-import style from "./Home.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { Link as ScrollLink } from "react-scroll"; // Import ScrollLink from react-scroll
 import Button from "@mui/material/Button";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
 
 export default function HomePage() {
-  const router = useRouter();
-
-  const [index, setIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
-  const amI = ["Programmer", "Designer", "Full stack developer"];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const currentText = amI[index];
-      const currentLength = displayedText.length;
-      const nextChar = currentText[currentLength];
-      if (nextChar) {
-        setDisplayedText((prevText) => prevText + nextChar);
-      } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          setDisplayedText("");
-          setIndex((prevIndex) => (prevIndex + 1) % amI.length);
-        }, 2000);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [index, displayedText, amI]);
-
-  const goToAbout = () => {
-    router.push("/about");
-  };
-
-  const goToContact = () => {
-    router.push("/contact-me");
-  };
-
   return (
-    <main>
-      <section className={style.home_page}>
-        <div className={style.home_page_left}>
-          <h5 className={style.welcome}>Hello, My Name is</h5>
-          <h2 className={style.name}>Rahul Mamoria</h2>
-          <p className={style.my_name}>
-            and I am{" "}
-            <span className={style.displayedText}>{displayedText}</span>
-          </p>
+    <section className="flex flex-col justify-between min-h-screen font-boska px-4 md:px-8">
+      <div className="flex flex-col items-center justify-center flex-grow">
+        {" "}
+        {/* Center the content and allow it to grow */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-gray-300 capitalize font-bold text-center">
+          Rahul Mamoria
+        </h1>
+        <p className="mt-2 text-lg sm:text-xl md:text-2xl text-gray-300 max-w-xl text-center">
+          {" "}
+          {/* Responsive text size */}
+          Aspiring software engineer committed to creativity and growth.
+        </p>
 
-          <p className={style.my_description}>
-            Aspiring and dynamic software engineer seeking to leverage creative and innovative thinking within a growing organization. Committed to enhancing organizational performance while achieving personal professional growth
-          </p>
-
-          <div className={style.more_info}>
-            <Button variant="contained" color="primary" onClick={goToAbout} style={{padding:"7px 20px"}}>
+        {/* Buttons */}
+        <div className="mt-6 space-x-4 flex justify-center">
+          <ScrollLink to="about" smooth={true} offset={-80} duration={500}>
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{
+                padding: "8px 20px",
+                backgroundColor: "#007bff", // Custom primary color
+                "&:hover": {
+                  backgroundColor: "#0056b3", // Darker shade on hover
+                },
+                borderRadius: "8px", // Rounded corners
+                fontWeight: "bold", // Bold text
+              }}
+            >
               About Me
             </Button>
-            <Button variant="contained" color="primary" onClick={goToContact} style={{padding:"7px 20px"}}>
+          </ScrollLink>
+          <ScrollLink to="contact" smooth={true} offset={-80} duration={500}>
+            <Button
+              variant="outlined"
+              color="primary"
+              sx={{
+                padding: "8px 20px",
+                borderColor: "#007bff", // Custom border color
+                color: "#007bff", // Text color for outlined button
+                "&:hover": {
+                  backgroundColor: "#007bff", // Background color on hover
+                  color: "#fff", // Text color on hover
+                },
+                borderRadius: "8px", // Rounded corners
+                fontWeight: "bold", // Bold text
+              }}
+            >
               Hire Me
             </Button>
-          </div>
-        
-          <div className={style.social_links}>
-          {/* <span>Social Media Links :</span> */}
-            <Link
-              className={style.link}
-              href="https://www.instagram.com/rahul_rm__/"
-              passHref
-              target="_blank"
-              style={{ color: '#E4405F' }}
-            >
-              <InstagramIcon style={{ fontSize: 40 }} />
-            </Link>
-            <Link
-              className={style.link}
-              href="https://www.linkedin.com/in/rahulmm07/"
-              passHref
-              target="_blank"
-              style={{ color: '#0077B5' }}
-            >
-              <LinkedInIcon style={{ fontSize: 40 }} />
-            </Link>
-            <Link
-              className={style.link}
-              href="https://www.facebook.com/rahul.mamoria.7?mibextid=ZbWKwL"
-              passHref
-              target="_blank"
-              style={{ color: '#1877F2' }}
-            >
-              <FacebookIcon style={{ fontSize: 40 }} />
-            </Link>
-            <Link
-              className={style.link}
-              href="https://twitter.com/rahul_rm__?t=ciF-p-3-9-76LLWu02gwwg&s=09"
-              passHref
-              target="_blank"
-              style={{ color: '#1DA1F2' }}
-            >
-              <TwitterIcon style={{ fontSize: 40 }} />
-            </Link>
-          </div>
+          </ScrollLink>
         </div>
-      </section>
-    </main>
+      </div>
+
+      {/* SVG Section at the Bottom */}
+      <div className="flex flex-col items-center mb-8 md:mb-4">
+        {" "}
+        {/* Margin bottom to give some space from the edge */}
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          strokeWidth="0"
+          viewBox="0 0 512 512"
+          className="animate-bounce w-5 h-5 sm:w-6 sm:h-6 text-gray-300 -my-1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+        </svg>
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          strokeWidth="0"
+          viewBox="0 0 512 512"
+          className="animate-bounce w-5 h-5 sm:w-6 sm:h-6 text-gray-300 -my-1"
+          style={{ animationDelay: "0.2s" }} // Delay for second arrow
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+        </svg>
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          strokeWidth="0"
+          viewBox="0 0 512 512"
+          className="animate-bounce w-5 h-5 sm:w-6 sm:h-6 text-gray-300 -my-1"
+          style={{ animationDelay: "0.4s" }} // Delay for third arrow
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+        </svg>
+      </div>
+    </section>
   );
 }

@@ -1,55 +1,69 @@
-// ProjectCard.js
 import Image from "next/image";
-import style from "./projects.module.css";
-import Link from "next/link";
 import PROJECT_DATA from "@/data/project_data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import { Button, Card, CardContent, Dialog, DialogTitle, Typography, IconButton, DialogActions, DialogContent } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub'; // Import the GitHub icon
+import ReactMarkdown from 'react-markdown'; // Import react-markdown
 
+// Dialog Component
+const ProjectDialog = ({ project, onClose }) => {
+  return (
+    <Dialog open={true} onClose={onClose}>
+      <DialogTitle>{project.project_name}</DialogTitle>
+      <DialogContent>
+        <ReactMarkdown>{project.project_detail}</ReactMarkdown> {/* Render project_detail as Markdown */}
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onClose} color="primary">Close</Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
 
 function ProjectCard() {
-  return (
-    <div className={style.project_container}>
-      {PROJECT_DATA.map((project, index) => (
-        <div key={index} className={style.project_item}>
-          <div className={style.project_image}>
-            <Image
-              src={project.image}
-              height={350}
-              width={600}
-              alt={project.project_name}
-            />
-          </div>
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
-          <div className={style.project_details}>
-            <h1 className={style.project_name}>
-              <FontAwesomeIcon
-                icon={project.icon}
-                className={style.project_icon}
-              />
-              {project.project_name}
-            </h1>
-            <div className={style.project_description}>
-              <p>{project.project_detail}</p>
-            </div>
-            <div className={style.project_buttons}>
-              <Link
-                href={project.project_link}
-                className={style.source_link}
-                target="_blank"
+  const handleCheckProjectClick = (project) => {
+    setSelectedProject(project);
+    setIsDialogOpen(true);
+  };
+
+  const closeDialog = () => {
+    setIsDialogOpen(false);
+    setSelectedProject(null);
+  };
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {PROJECT_DATA.map((project, index) => (
+        <Card key={index} className="flex flex-col">
+          <Image
+            src={project.image}
+            height={800}
+            width={800}
+            alt={project.project_name}
+            className="object-cover h-48 w-full"
+          />
+          <CardContent className="flex flex-col justify-between"> 
+            <Typography variant="h6" className="mb-2">{project.project_name}</Typography>
+            <div className="flex justify-between items-center">
+              <IconButton
+                color="primary"
+                onClick={() => window.open(project.github_link, "_blank")}
               >
-                Check Project
-              </Link>
-              <Link
-                href={project.github_link}
-                className={style.github_link}
-                target="_blank"
-              >
-                Source Code
-              </Link>
+                <GitHubIcon />
+              </IconButton>
+              <Button onClick={() => handleCheckProjectClick(project)}>Description</Button>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       ))}
+
+      {/* Dialog for project details */}
+      {isDialogOpen && selectedProject && (
+        <ProjectDialog project={selectedProject} onClose={closeDialog} />
+      )}
     </div>
   );
 }
