@@ -14,17 +14,57 @@ import {
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub"; // Import the GitHub icon
 import ReactMarkdown from "react-markdown"; // Import react-markdown
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome for tech stack icons
 
 // Dialog Component
 const ProjectDialog = ({ project, onClose }) => {
   return (
-    <Dialog open={true} onClose={onClose}>
-      <DialogTitle>{project.project_name}</DialogTitle>
-      <DialogContent>
-        <ReactMarkdown>{project.project_detail}</ReactMarkdown>{" "}
-        {/* Render project_detail as Markdown */}
+    <Dialog
+      open={true}
+      onClose={onClose}
+      PaperProps={{
+        sx: {
+          width: '1200px',  // Increase the width as needed
+          height: '600px',  // Increase the height as needed
+          backgroundColor: '#34373b',
+          color: "#d1d5db"
+        },
+      }}
+    >
+      <DialogTitle sx={{ backgroundColor: '#43454a', color: '#d1d5db' }}>
+        {project.project_name}
+      </DialogTitle>
+      <DialogContent
+        sx={{
+          overflowY: 'auto',
+          backgroundColor: '#34373b',
+        }}
+      >
+        {/* Display tech stack */}
+        <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold', color: '#d1d5db', paddingTop:"10px" }}>
+          Tech Stack:
+        </Typography>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.techstack.map((tech, idx) => (
+            <span key={idx} className="text-gray-300 bg-gray-700 px-2 py-1 rounded">
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Display project details */}
+        <Typography variant="subtitle1" sx={{ mb: 1, fontWeight: 'bold', color: '#d1d5db' }}>
+          Project Details:
+        </Typography>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+          {project.project_detail.map((detail, index) => (
+            <li key={index} style={{ marginBottom: '10px' }}>
+              <ReactMarkdown>{detail}</ReactMarkdown>
+            </li>
+          ))}
+        </ul>
       </DialogContent>
-      <DialogActions>
+      <DialogActions sx={{ backgroundColor: '#43454a' }}>
         <Button onClick={onClose} color="primary">
           Close
         </Button>
@@ -32,6 +72,7 @@ const ProjectDialog = ({ project, onClose }) => {
     </Dialog>
   );
 };
+
 
 function ProjectCard() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -52,7 +93,7 @@ function ProjectCard() {
       {PROJECT_DATA.map((project, index) => (
         <Card 
           key={index} 
-          className="flex flex-col bg-transparent shadow-none border border-gray-300 pt-6 rounded-lg  " // Make card transparent
+          className="flex flex-col bg-transparent shadow-none border border-gray-600 pt-6 rounded-lg"
         >
           <Image
             src={project.image}
@@ -65,10 +106,19 @@ function ProjectCard() {
             <Typography variant="h6" className="mb-2">
               {project.project_name}
             </Typography>
-            <div className="border-b-2"></div>
-            <div className="flex justify-between items-center mt-4 ">
+
+            {/* Display project tech stack */}
+            <div className="flex flex-wrap gap-2 mb-2 text-sm">
+              {project.techstack.map((tech, idx) => (
+                <span key={idx} className="text-gray-300 bg-gray-700 px-2 py-1 rounded">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="border border-b-0 my-3"></div>
+            <div className="flex justify-between items-center">
               <IconButton
-                // color="primary"
                 className="text-gray-100"
                 onClick={() => window.open(project.github_link, "_blank")}
               >

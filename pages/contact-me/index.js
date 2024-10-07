@@ -108,29 +108,29 @@ const ContactPage = () => {
             I’d love to hear from you! Whether you have a question, a project
             proposal, or just want to say hello, feel free to send me a message.
           </p>
-          <ul className="space-y-2">
+          <ul className="space-y-2 ">
             <li className="flex items-center">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="mr-2 text-gray-300"
+                className="mr-2  text-gray-300"
               />
-              <span className="font-semibold">Email: </span>
-              &nbsp;rahulmamoria@gmail.com
+              <span className="text-xl italic">Email: &nbsp;rahulmamoria@gmail.com </span>
+              
             </li>
             <li className="flex items-center">
               <FontAwesomeIcon
                 icon={faPhoneAlt}
                 className="mr-2 text-gray-300"
               />
-              <span className="font-semibold">Phone: </span>&nbsp;+91 7690898460
+              <span className="text-xl italic">Phone: &nbsp;+91 7690898460 </span>
             </li>
             <li className="flex items-center">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
                 className="mr-2 text-gray-300"
               />
-              <span className="font-semibold">Location: </span>&nbsp;Hyderabad,
-              India
+              <span className="text-xl italic">Location: &nbsp;Hyderabad,
+              India </span>
             </li>
           </ul>
         </div>

@@ -33,9 +33,9 @@ const CertificatePage = () => {
       <div className="flex items-center">
         <button
           onClick={handlePrev}
-          className="bg-white p-2 rounded-full shadow hover:bg-gray-100 focus:outline-none"
+          className="text-gray-500 px-4 py-2 border border-gray-500 rounded-full shadow hover:border-gray-400 hover:text-gray-400 focus:outline-none"
         >
-          &#10094; {/* Left Arrow */}
+          &#10094;
         </button>
 
         <SwipeableViews index={index} enableMouseEvents onChangeIndex={setIndex}>
@@ -63,7 +63,7 @@ const CertificatePage = () => {
 
         <button
           onClick={handleNext}
-          className="bg-white p-2 rounded-full shadow hover:bg-gray-100 focus:outline-none"
+          className="text-gray-500 px-4 py-2 border border-gray-500 rounded-full shadow hover:border-gray-400 hover:text-gray-400 focus:outline-none"
         >
           &#10095;
         </button>
