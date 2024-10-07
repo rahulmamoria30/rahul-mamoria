@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import SwipeableViews from 'react-swipeable-views';
+import Carousel from 'react-material-ui-carousel';
+import { Button } from '@mui/material';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const CertificatePage = () => {
   // Sample images for the carousel
+  const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
     '/images/gcp_certificate.jpg',
     '/images/React_certificate.jpg',
@@ -12,48 +15,50 @@ const CertificatePage = () => {
     '/images/Javascript_certificate.jpg',
   ];
 
-  const [index, setIndex] = useState(0);
 
-  // Function to handle the next image
-  const handleNext = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
-  // Function to handle the previous image
-  const handlePrev = () => {
-    setIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
-
   return (
-    <div className="p-4 font-boska">
-      <h1 className='text-gray-100 text-4xl md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16'>Certifications</h1>
+    <div className="p-4 font-serif">
+      <h1 className="text-4xl text-gray-300 md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16">
+        Certifications
+      </h1>
 
-      {/* Image Carousel */}
-      <div className="flex items-center justify-center">
-        <button
-          onClick={handlePrev}
-          className="text-gray-500 px-4 py-2 border border-gray-500 rounded-full shadow hover:border-gray-400 hover:text-gray-400 focus:outline-none"
+      <div className="relative max-w-2xl mx-auto px-20">
+        {/* Left Arrow */}
+        <button 
+          onClick={prevSlide}
+          className="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full border hover:border-gray-100 text-gray-300 border-gray-300 hover:text-gray-100 transition-colors"
         >
-          &#10094;
+          <ChevronLeft className="w-6 h-6" />
         </button>
 
-        <SwipeableViews index={index} enableMouseEvents onChangeIndex={setIndex}>
-          {images.map((img, imgIndex) => (
-            <div key={imgIndex} className="flex justify-center items-center w-full">
-              <img
-                src={img}
-                alt={`Certificate ${imgIndex + 1}`}
-                className="w-full h-auto max-w-md rounded-lg shadow-lg mx-2"
-              />
-            </div>
-          ))}
-        </SwipeableViews>
+        {/* Carousel Content */}
+        <div className="overflow-hidden">
+          <div className="flex justify-center items-center">
+            <img
+              src={images[currentIndex]}
+              alt={`Certificate ${currentIndex + 1}`}
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
 
-        <button
-          onClick={handleNext}
-          className="text-gray-500 px-4 py-2 border border-gray-500 rounded-full shadow hover:border-gray-400 hover:text-gray-400 focus:outline-none"
+        {/* Right Arrow */}
+        <button 
+          onClick={nextSlide}
+          className="absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full border hover:border-gray-100 text-gray-300 border-gray-300 hover:text-gray-100 transition-colors"
         >
-          &#10095;
+          <ChevronRight className="w-6 h-6" />
         </button>
       </div>
     </div>
@@ -61,3 +66,14 @@ const CertificatePage = () => {
 };
 
 export default CertificatePage;
+
+
+
+const images = [
+  '/images/gcp_certificate.jpg',
+  '/images/React_certificate.jpg',
+  '/images/Javascript_certificate.jpg',
+  '/images/React_certificate.jpg',
+  '/images/Javascript_certificate.jpg',
+  '/images/Javascript_certificate.jpg',
+];
