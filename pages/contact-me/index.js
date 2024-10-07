@@ -8,11 +8,9 @@ import {
   CircularProgress
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faEnvelope,
   faPhoneAlt,
-  faMapMarkerAlt,
   faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -20,7 +18,6 @@ const ContactPage = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
-  const locationRef = useRef(null);
   const messageRef = useRef(null);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -34,7 +31,6 @@ const ContactPage = () => {
       !nameRef.current.value ||
       !emailRef.current.value ||
       !phoneRef.current.value ||
-      !locationRef.current.value ||
       !messageRef.current.value
     ) {
       setErrors({ message: "Please fill out all fields." });
@@ -45,7 +41,6 @@ const ContactPage = () => {
       name: nameRef.current.value,
       email: emailRef.current.value,
       phone: phoneRef.current.value,
-      location: locationRef.current.value,
       message: messageRef.current.value
     };
 
@@ -59,7 +54,6 @@ const ContactPage = () => {
       nameRef.current.value = "";
       emailRef.current.value = "";
       phoneRef.current.value = "";
-      locationRef.current.value = "";
       messageRef.current.value = "";
     } catch (error) {
       setIsLoading(false);
@@ -112,10 +106,9 @@ const ContactPage = () => {
             <li className="flex items-center">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="mr-2  text-gray-300"
+                className="mr-2 text-gray-300"
               />
               <span className="text-xl italic">Email: &nbsp;rahulmamoria@gmail.com </span>
-              
             </li>
             <li className="flex items-center">
               <FontAwesomeIcon
@@ -123,14 +116,6 @@ const ContactPage = () => {
                 className="mr-2 text-gray-300"
               />
               <span className="text-xl italic">Phone: &nbsp;+91 7690898460 </span>
-            </li>
-            <li className="flex items-center">
-              <FontAwesomeIcon
-                icon={faMapMarkerAlt}
-                className="mr-2 text-gray-300"
-              />
-              <span className="text-xl italic">Location: &nbsp;Hyderabad,
-              India </span>
             </li>
           </ul>
         </div>

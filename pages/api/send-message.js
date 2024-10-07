@@ -1,24 +1,25 @@
 import nodemailer from 'nodemailer';
 
 export default async (req, res) => {
+    console.log(process.env.EMAIL_USER)
     if (req.method === 'POST') {
-        const { name, email, phone, location, message } = req.body;
+        const { name, email, phone, message } = req.body; 
         
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-               
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
             }
         });
 
-
+        console.log( process.env.EMAIL_USER);
+        
         let mailOptions = {
             from: email,
             to: 'rahulmamoria@gmail.com',
-            subject: 'Message form your portfolio website',
-            text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nLocation: ${location}\nMessage: ${message}`
+            subject: 'Message from your portfolio website',
+            text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
         };
 
         try {
