@@ -2,7 +2,7 @@ import { faPlay, faMusic, faBowlFood, faLaptop, faComputer } from "@fortawesome/
 
 const PROJECT_DATA = [
   {
-    image: "/images/unit-testing.png",
+    image: "/images/unit-testing.svg",
     project_name: "Software Unit Testing",
     project_detail: 
       `**Developed a unit test generator for Java and Python** using an LLM (Language Model) based approach.  
@@ -48,18 +48,18 @@ const PROJECT_DATA = [
     github_link: "https://github.com/rahulmamoria30/myMusic-webpage",
     icon: faMusic,
   },
-  {
-    image: "/images/portfolio.png",
-    project_name: "Portfolio Website",
-    project_detail: 
-      `This portfolio website is built using **Next.js**, featuring a clean and responsive design to showcase my skills and projects effectively.  
-      - It leverages Next.js for fast loading times and SEO benefits.  
-      - Includes a project gallery with descriptions and links, and provides a contact form for collaboration opportunities.  
-      - Designed to highlight my professional profile and demonstrate expertise in frontend development and Next.js.`,
-    project_link: "https://rahul-mamoria.netlify.app/",
-    github_link: "https://github.com/rahulmamoria30/rahul-mamoria",
-    icon: faLaptop,
-  },
+  // {
+  //   image: "/images/portfolio.png",
+  //   project_name: "Portfolio Website",
+  //   project_detail: 
+  //     `This portfolio website is built using **Next.js**, featuring a clean and responsive design to showcase my skills and projects effectively.  
+  //     - It leverages Next.js for fast loading times and SEO benefits.  
+  //     - Includes a project gallery with descriptions and links, and provides a contact form for collaboration opportunities.  
+  //     - Designed to highlight my professional profile and demonstrate expertise in frontend development and Next.js.`,
+  //   project_link: "https://rahul-mamoria.netlify.app/",
+  //   github_link: "https://github.com/rahulmamoria30/rahul-mamoria",
+  //   icon: faLaptop,
+  // },
 ];
 
 export default PROJECT_DATA;

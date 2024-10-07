@@ -17,24 +17,37 @@ export default function Home() {
         <section id="home">
           <HomePage aboutRef={aboutRef} contactRef={contactRef} />
         </section>
+        <hr /> {/* Horizontal line after Home section */}
+        
         <section id="about" ref={aboutRef}>
           <AboutPage />
         </section>
+        <hr /> {/* Horizontal line after About section */}
+
         <section id="skills">
           <MySkills />
         </section>
+        <hr /> {/* Horizontal line after Skills section */}
+
         <section id="experience">
           <Experience />
         </section>
+        <hr /> {/* Horizontal line after Experience section */}
+
         <section id="projects">
           <ProjectsPage />
         </section>
+        <hr /> {/* Horizontal line after Projects section */}
+
         <section id="certificates">
           <CertificatePage />
         </section>
+        <hr /> {/* Horizontal line after Certificates section */}
+
         <section id="contact" ref={contactRef}>
           <ContactPage />
         </section>
+        <hr /> {/* Horizontal line after Contact section */}
       </main>
     </>
   );

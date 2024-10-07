@@ -8,7 +8,13 @@ import {
   CircularProgress
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faEnvelope,
+  faPhoneAlt,
+  faMapMarkerAlt,
+  faCheckCircle
+} from "@fortawesome/free-solid-svg-icons";
 
 const ContactPage = () => {
   const nameRef = useRef(null);
@@ -55,7 +61,6 @@ const ContactPage = () => {
       phoneRef.current.value = "";
       locationRef.current.value = "";
       messageRef.current.value = "";
-
     } catch (error) {
       setIsLoading(false);
       console.error("Error sending message:", error);
@@ -63,30 +68,69 @@ const ContactPage = () => {
     }
   };
 
+  // Define common sx styles for TextField
+  const textFieldStyles = {
+    "& .MuiInputBase-root": {
+      color: "#D1D5DB" // text-gray-300 for input text
+    },
+    "& .MuiFormLabel-root": {
+      color: "#D1D5DB" // text-gray-300 for labels
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "#D1D5DB" // text-gray-300 for borders
+      },
+      "&:hover fieldset": {
+        borderColor: "#A8A29E" // slightly darker on hover
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#F3F4F6" // change border color on focus
+      }
+    }
+  };
+
   return (
-    <section className="py-16 px-4 bg-gray-100">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row bg-white rounded-lg shadow-lg">
-        {/* Left Section - Contact Intro */}
-        <div className="w-full md:w-1/2 p-8 bg-blue-500 text-white rounded-l-lg">
+    <section className="py-16 px-4 text-gray-300 font-boska ">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16">
+        Let's connect
+      </h1>
+
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row ">
+        <div className="w-full md:w-1/2 p-8 rounded-l-lg">
           <Typography
             variant="h4"
             component="h1"
-            className="text-2xl font-bold mb-4"
+            className="text-4xl font-bold mb-4"
           >
             Let's Get in Touch
           </Typography>
-          <p className="mb-6">
-            I’d love to hear from you! Whether you have a question, a project proposal, or just want to say hello, feel free to send me a message.
+          <p className="mb-6 text-xl">
+            I’d love to hear from you! Whether you have a question, a project
+            proposal, or just want to say hello, feel free to send me a message.
           </p>
           <ul className="space-y-2">
             <li className="flex items-center">
-              <span className="font-semibold">Email: </span>&nbsp;example@example.com
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="mr-2 text-gray-300"
+              />
+              <span className="font-semibold">Email: </span>
+              &nbsp;rahulmamoria@gmail.com
             </li>
             <li className="flex items-center">
-              <span className="font-semibold">Phone: </span>&nbsp;+1234567890
+              <FontAwesomeIcon
+                icon={faPhoneAlt}
+                className="mr-2 text-gray-300"
+              />
+              <span className="font-semibold">Phone: </span>&nbsp;+91 7690898460
             </li>
             <li className="flex items-center">
-              <span className="font-semibold">Location: </span>&nbsp;City, Country
+              <FontAwesomeIcon
+                icon={faMapMarkerAlt}
+                className="mr-2 text-gray-300"
+              />
+              <span className="font-semibold">Location: </span>&nbsp;Hyderabad,
+              India
             </li>
           </ul>
         </div>
@@ -101,9 +145,9 @@ const ContactPage = () => {
                 inputRef={nameRef}
                 fullWidth
                 required
-                className="w-full"
                 error={!!errors.name}
                 helperText={errors.name}
+                sx={textFieldStyles} // Applying common styles
               />
             </Box>
             <Box>
@@ -114,9 +158,9 @@ const ContactPage = () => {
                 inputRef={emailRef}
                 fullWidth
                 required
-                className="w-full"
                 error={!!errors.email}
                 helperText={errors.email}
+                sx={textFieldStyles} // Applying common styles
               />
             </Box>
             <Box>
@@ -127,23 +171,11 @@ const ContactPage = () => {
                 inputRef={phoneRef}
                 fullWidth
                 required
-                className="w-full"
                 error={!!errors.phone}
                 helperText={errors.phone}
+                sx={textFieldStyles} // Applying common styles
               />
             </Box>
-            {/* <Box>
-              <TextField
-                label="Where are you from"
-                variant="outlined"
-                inputRef={locationRef}
-                fullWidth
-                required
-                className="w-full"
-                error={!!errors.location}
-                helperText={errors.location}
-              />
-            </Box> */}
             <Box>
               <TextField
                 label="Message"
@@ -153,9 +185,9 @@ const ContactPage = () => {
                 required
                 multiline
                 rows={4}
-                className="w-full"
                 error={!!errors.message}
                 helperText={errors.message}
+                sx={textFieldStyles} // Applying common styles
               />
             </Box>
             <div className="flex justify-between items-center">

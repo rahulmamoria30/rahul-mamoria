@@ -25,10 +25,9 @@ const CertificatePage = () => {
   };
 
   return (
-    <div className="p-4 relative">
-      <h2 className="text-lg font-semibold mb-4">
-        Checkout certificates and descriptions
-      </h2>
+    <div className="p-4 font-boska ">
+           <h1 className='text-gray-100 text-4xl md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16'>Certifications</h1>
+
 
       {/* Image Carousel */}
       <div className="flex items-center">
@@ -66,7 +65,7 @@ const CertificatePage = () => {
           onClick={handleNext}
           className="bg-white p-2 rounded-full shadow hover:bg-gray-100 focus:outline-none"
         >
-          &#10095; {/* Right Arrow */}
+          &#10095;
         </button>
       </div>
     </div>

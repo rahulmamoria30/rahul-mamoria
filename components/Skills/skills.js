@@ -30,7 +30,7 @@ export default function Skills() {
         <h2 className="text-2xl text-gray-100 mb-6">Coding Profiles</h2>
         <div className="flex flex-wrap gap-6 items-center">
           <Link
-            href="https://leetcode.com/"
+            href="https://leetcode.com/u/rahul_rm__/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center border border-gray-200 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
@@ -46,7 +46,7 @@ export default function Skills() {
           </Link>
 
           <Link
-            href="https://www.geeksforgeeks.org/"
+            href="https://www.geeksforgeeks.org/user/rahulmamoria/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center border border-gray-200 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
@@ -62,7 +62,7 @@ export default function Skills() {
           </Link>
 
           <Link
-            href="https://www.codechef.com/"
+            href="https://www.codechef.com/users/rahulrm_903"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center border border-gray-200 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
@@ -78,7 +78,7 @@ export default function Skills() {
           </Link>
 
           <Link
-            href="https://codeforces.com/"
+            href="https://codeforces.com/profile/rahul_rm__"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center border border-gray-200 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"

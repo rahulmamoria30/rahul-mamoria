@@ -4,11 +4,8 @@ import ProjectCard from "./project-card";
 
 export default function ProjectsPage() {
   return (
-    <main className="p-6 bg-gray-100">
-      <div className="flex items-center mb-6">
-        <FontAwesomeIcon icon={faProjectDiagram} className="text-4xl text-blue-500 mr-2" />
-        <h1 className="text-3xl font-bold">Projects</h1>
-      </div>
+    <main className="p-6 font-boska" >
+      <h1 className="text-gray-100 text-4xl md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16">Projects</h1> 
       <ProjectCard />
     </main>
   );
