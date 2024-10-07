@@ -1,5 +1,5 @@
 import { Mail, MapPin } from 'lucide-react';
-import { LinkedIn, Instagram, Facebook, Twitter } from '@mui/icons-material';
+import { LinkedIn, Instagram, Facebook, Twitter, GitHub } from '@mui/icons-material';
 
 export default function AboutPage() {
   return (
@@ -52,11 +52,9 @@ export default function AboutPage() {
               <a href="https://www.instagram.com/rahul_rm__/" className="text-blue-500 hover:text-blue-600">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="https://www.facebook.com/rahul.mamoria.7?mibextid=ZbWKwL" className="text-blue-500 hover:text-blue-600">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="https://twitter.com/rahul_rm__?t=ciF-p-3-9-76LLWu02gwwg&s=09" className="text-blue-500 hover:text-blue-600">
-                <Twitter className="h-6 w-6" />
+              
+              <a href="https://github.com/rahulmamoria30" className="text-blue-500 hover:text-blue-600">
+                <GitHub className="h-6 w-6" />
               </a>
             </div>
           </div>

@@ -28,7 +28,7 @@ const CertificatePage = () => {
     );
   };
   return (
-    <div className="p-4 font-serif">
+    <div className="font-boska">
       <h1 className="text-4xl text-gray-300 md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16">
         Certifications
       </h1>

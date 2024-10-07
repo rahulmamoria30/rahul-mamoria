@@ -34,14 +34,13 @@ export default function MainHeader() {
     { label: "Skills", to: "skills" },
     { label: "Experience", to: "experience" },
     { label: "Projects", to: "projects" },
-    { label: "Certificates", to: "certificates" },
     { label: "Contact me", to: "contact" },
   ];
 
   return (
     <header
       className={`flex fixed w-full items-center justify-between ${
-        isScrolled ? "backdrop-blur-md bg-gray-900/80 shadow-lg" : "bg-gray-900 shadow-md"
+        isScrolled ? "backdrop-blur-md bg-[#34373b]/80 shadow-lg" : "bg-[#34373b]"
       } top-0 left-0 z-10 px-4 md:px-8 lg:px-24 py-4 transition-all duration-300 ease-in-out font-boska`}
     >
       <div className="p-1 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
@@ -73,14 +72,20 @@ export default function MainHeader() {
 
       {/* Hamburger Icon */}
       <button onClick={toggleMobileMenu} className="md:hidden focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-gray-300">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
+        {isMobileMenuOpen ? (
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-gray-300">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-gray-300">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        )}
       </button>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 right-0 bg-gray-900 shadow-md w-full">
+        <div className="absolute top-20 right-0 bg-[#34373b] shadow-md w-[100%] h-[100vh]">
           <ul className="flex flex-col items-center gap-4 py-4">
             {navItems.map((item, index) => (
               <li key={index}>

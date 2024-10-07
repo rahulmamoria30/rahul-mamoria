@@ -5,49 +5,40 @@ import AboutPage from "./about";
 import ProjectsPage from "./projects";
 import CertificatePage from "./certificates";
 import ContactPage from "./contact-me";
-import { useRef } from "react";
+
 
 export default function Home() {
-  const aboutRef = useRef(null);
-  const contactRef = useRef(null);
-
   return (
     <>
       <main>
         <section id="home">
-          <HomePage aboutRef={aboutRef} contactRef={contactRef} />
+          <HomePage />
         </section>
-        <hr /> {/* Horizontal line after Home section */}
-        
-        <section id="about" ref={aboutRef}>
+        <hr />
+        <section id="about">
           <AboutPage />
         </section>
-        <hr /> {/* Horizontal line after About section */}
-
-        <section id="skills">
+        <hr /> 
+        <section id="skills" className="pb-16">
           <MySkills />
         </section>
-        <hr /> {/* Horizontal line after Skills section */}
-
-        <section id="experience">
+        <hr /> 
+        <section id="experience" className="pb-16">
           <Experience />
         </section>
-        <hr /> {/* Horizontal line after Experience section */}
-
-        <section id="projects">
+        <hr /> 
+        <section id="projects" className="pb-16">
           <ProjectsPage />
         </section>
-        <hr /> {/* Horizontal line after Projects section */}
-
-        <section id="certificates">
+        <hr /> 
+        <section id="certificates" className="pb-16">
           <CertificatePage />
         </section>
-        <hr /> {/* Horizontal line after Certificates section */}
-
-        <section id="contact" ref={contactRef}>
+        <hr /> 
+        <section id="contact">
           <ContactPage />
         </section>
-        <hr /> {/* Horizontal line after Contact section */}
+        <hr /> 
       </main>
     </>
   );
