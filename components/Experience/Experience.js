@@ -20,7 +20,7 @@ export default function Experience() {
         Work Experiences
       </h1>
 
-      <div className="space-y-4">
+      <div className="space-y-4 font-boska">
         {experienceData.map((experience, index) => (
           <Accordion
             key={index}
