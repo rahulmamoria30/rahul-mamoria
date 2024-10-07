@@ -3,7 +3,7 @@ import { LinkedIn, Instagram, Facebook, Twitter, GitHub } from '@mui/icons-mater
 
 export default function AboutPage() {
   return (
-    <div className="w-full h-full rounded-lg overflow-hidden px-4 py-8 md:px-6 md:py-10 font-boska">
+    <div className="w-full h-full rounded-lg overflow-hidden px-4 md:px-6 md:py-10 font-boska">
       <h1 className='text-gray-100 text-4xl md:text-5xl lg:text-6xl py-8 md:py-12 lg:py-16'>About me</h1>
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 h-full">
         

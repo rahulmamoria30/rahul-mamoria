@@ -15,7 +15,7 @@ export default function Home() {
           <HomePage />
         </section>
         <hr />
-        <section id="about">
+        <section id="about" className="pb-16">
           <AboutPage />
         </section>
         <hr /> 
