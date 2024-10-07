@@ -1,7 +1,17 @@
-import React from 'react';
-import { Business, Event, LocationOn, KeyboardArrowDown } from '@mui/icons-material';
-import { Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import experienceData from '@/data/experience-data';
+import React from "react";
+import {
+  Business,
+  Event,
+  LocationOn,
+  KeyboardArrowDown
+} from "@mui/icons-material";
+import {
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
+} from "@mui/material";
+import experienceData from "@/data/experience-data";
 
 export default function Experience() {
   return (
@@ -42,11 +52,11 @@ export default function Experience() {
                     {experience.company}
                   </Typography>
                 </div>
-                <div className="text-gray-600 dark:text-gray-300 space-y-2">
-                  <Typography className="flex items-center gap-2">
+                <div className="text-gray-600 dark:text-gray-300 flex flex-col md:flex-row items-start md:items-center justify-center gap-4">
+                  <Typography className="flex items-center gap-2 mb-2 md:mb-0">
                     <Business fontSize="small" /> {experience.title}
                   </Typography>
-                  <Typography className="flex items-center gap-2">
+                  <Typography className="flex items-center gap-2 mb-2 md:mb-0">
                     <Event fontSize="small" /> {experience.date}
                   </Typography>
                   <Typography className="flex items-center gap-2">
@@ -58,9 +68,11 @@ export default function Experience() {
                 <Typography className="text-gray-700 dark:text-gray-300">
                   {experience.description}
                 </Typography>
-                <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-300 text-xl">
+                <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-300 text-xl md:text-lg">
                   {experience.responsibilities.map((responsibility, idx) => (
-                    <li key={idx}>{responsibility}</li>
+                    <li key={idx} className="mb-1 last:mb-0">
+                      {responsibility}
+                    </li>
                   ))}
                 </ul>
               </div>
