@@ -1,30 +1,41 @@
-import { AppLink } from "@/components/ui/link";
-import Image from "next/image";
+import { AppLink } from "@/components/ui/link"
+import Image from "next/image"
 
 interface CodingProfileProps {
-  url: string;
-  title: string;
-  imagePath: string;
-  className?: string;
+  url: string
+  slug: string
+  title: string
+  imagePath: string
+  className?: string
 }
 
-export function CodingProfile({ url, title, imagePath, className }: CodingProfileProps) {
+export function CodingProfile({
+  url,
+  slug,
+  title,
+  imagePath,
+  className,
+}: CodingProfileProps) {
+  const isInternal = slug === "leetcode"
+  const href = isInternal ? `/coding-profiles/${slug}` : url
+
   return (
     <AppLink
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`flex items-center px-4 py-2 rounded-md bg-primary/10 hover:bg-primary/20 text-primary font-medium text-sm transition-colors ${className}`}
+      href={href}
+      {...(!isInternal && { target: "_blank", rel: "noopener noreferrer" })}
+      className={`group flex items-center gap-3 px-4 py-2.5 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 text-sm font-medium transition-all duration-300 ${className}`}
       aria-label={`${title} Profile`}
     >
       <Image
         src={imagePath}
         alt={title}
-        height={24}
-        width={24}
-        className="mr-2 bg-transparent"
+        height={22}
+        width={22}
+        className="bg-transparent group-hover:scale-110 transition-transform duration-300"
       />
-      <span>{title}</span>
+      <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-200">
+        {title}
+      </span>
     </AppLink>
-  );
-} 
+  )
+}

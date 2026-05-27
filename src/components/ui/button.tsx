@@ -33,7 +33,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {isLoading ? (
-          <span className="mr-2">Loading...</span>
+          <span className="mr-2">Sending...</span>
         ) : (
           children
         )}

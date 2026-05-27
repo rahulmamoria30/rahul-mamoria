@@ -6,16 +6,18 @@ import {
   Pencil1Icon,
   InstagramLogoIcon,
   PersonIcon,
-} from "@radix-ui/react-icons";
-import { MapPinIcon } from "lucide-react";
+  VideoIcon,
+} from "@radix-ui/react-icons"
+import { MapPinIcon } from "lucide-react"
 
 export const profileData = {
   name: "Rahul Mamoria",
   role: "Software Developer",
+  status: "Open to work",
   location: "Hyderabad, India",
   locationIcon: MapPinIcon,
   image: "/profile.jpeg",
-};
+}
 
 export const socialLinks = [
   {
@@ -33,12 +35,15 @@ export const socialLinks = [
     href: "https://twitter.com/rahul_rm__",
     icon: TwitterLogoIcon,
   },
-];
-export const socailLinksWithInstagram = [...socialLinks, {
-  label: "Instagram",
-  href: "https://instagram.com/rahul_rm__",
-  icon: InstagramLogoIcon,
-}];
+]
+export const socailLinksWithInstagram = [
+  ...socialLinks,
+  {
+    label: "Instagram",
+    href: "https://instagram.com/rahul_rm__",
+    icon: InstagramLogoIcon,
+  },
+]
 
 export const externalLinks = [
   {
@@ -56,6 +61,11 @@ export const externalLinks = [
     url: "https://rahulmamoria.hashnode.dev/",
     icon: Pencil1Icon,
   },
+  {
+    title: "YouTube Vlogs",
+    url: "/vlogs",
+    icon: VideoIcon,
+  },
   // {
   //   title: "Latest Tech Trends",
   //   url: "https://openai.com/index/generative-models/",
@@ -66,4 +76,4 @@ export const externalLinks = [
   //   url: "https://vercel.com/blog/ai-sdk-3-generative-ui",
   //   icon: ReaderIcon,
   // },
-]; 
+]
