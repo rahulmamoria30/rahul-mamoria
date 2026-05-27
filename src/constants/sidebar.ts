@@ -16,7 +16,7 @@ export const profileData = {
   status: "Open to work",
   location: "Hyderabad, India",
   locationIcon: MapPinIcon,
-  image: "/profile.jpeg",
+  image: "/profile.png",
 }
 
 export const socialLinks = [
