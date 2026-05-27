@@ -31,7 +31,7 @@ export function Recommendations() {
       </MotionDiv>
 
       {loading ? (
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6">
           {[...Array(2)].map((_, i) => (
             <div
               key={i}
@@ -53,7 +53,7 @@ export function Recommendations() {
           ))}
         </div>
       ) : (
-        <MotionDiv variant="container" className="grid gap-6 sm:grid-cols-2">
+        <MotionDiv variant="container" className="grid gap-6">
           {recommendations.map((rec: Recommendation, index: number) => (
             <MotionDiv
               key={index}
