@@ -1,134 +1,102 @@
-"use client";
+"use client"
 
-import { FolderGit2, Github } from "lucide-react";
-import { SectionTitle } from "@/components/ui/section-title";
-import { PROJECT_DATA } from "@/data/projects";
-import { AppLink } from "@/components/ui/link";
-import { AnimatePresence } from "framer-motion";
-import { MotionDiv } from "@/components/ui/motion-div";
+import { FolderGit2, Github, ExternalLink, ArrowRight } from "lucide-react"
+import { SectionTitle } from "@/components/ui/section-title"
+import { PROJECT_DATA } from "@/data/projects"
+import { AppLink } from "@/components/ui/link"
+import { MotionDiv } from "@/components/ui/motion-div"
 
 export function Projects() {
   return (
     <MotionDiv
       variant="container"
       id="projects"
-      className="space-y-6 scroll-mt-24"
+      className="space-y-10 scroll-mt-24"
     >
       <MotionDiv variant="item">
         <SectionTitle icon={FolderGit2} title="Projects" />
       </MotionDiv>
-      <MotionDiv 
-        variant="container"
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-      >
+
+      <MotionDiv variant="container" className="flex flex-col gap-5">
         {PROJECT_DATA.map((project, index) => (
           <MotionDiv
             key={index}
             variant="card"
-            whileHover="hover"
-            className="bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden border border-border group hover:border-primary/30 transition-all duration-300"
+            className="group rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/20 transition-all duration-300"
           >
-            <div className="relative h-24">
-              {/* Background Pattern */}
-              <MotionDiv 
-                variant="fade"
-                className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent"
-              />
-              <MotionDiv 
-                variant="fade"
-                className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(255,255,255,0))] group-hover:bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.2),rgba(255,255,255,0))] transition-all duration-500"
-              />
-              {/* Title Section */}
-              <div className="relative h-full flex items-center px-6">
-                <div className="flex items-center gap-4 w-full">
-                  <MotionDiv 
-                    variant="fade"
-                    className="relative flex-shrink-0"
-                  >
-                    <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-                      <project.icon className="w-4 h-4 text-primary" />
-                    </div>
-                    <div className="absolute -inset-1 rounded-md bg-primary/5 blur-md group-hover:bg-primary/10 transition-all duration-300 -z-10" />
-                  </MotionDiv>
-                  <div className="flex-1 min-w-0">
-                    <MotionDiv 
-                      variant="slide"
-                      className="text-lg font-semibold truncate"
+            <div className="flex flex-col sm:flex-row">
+              {/* Left: Icon + Index */}
+              <div className="flex sm:flex-col items-center gap-3 sm:gap-2 px-5 py-4 sm:py-5 sm:w-20 sm:border-r border-b sm:border-b-0 border-border/30 flex-shrink-0">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-card/60 border border-border/50 group-hover:border-primary/20 transition-all duration-300">
+                  <project.icon className="w-4 h-4 text-primary/70 group-hover:text-primary transition-colors duration-300" />
+                </div>
+                <span className="text-[10px] font-mono text-muted-foreground/40 hidden sm:block">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              {/* Right: Content */}
+              <div className="flex-1 px-5 py-4 sm:py-5 space-y-4">
+                {/* Title Row */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <h3 className="text-base font-semibold text-foreground/90 group-hover:text-foreground transition-colors duration-200">
+                    {project.project_name}
+                  </h3>
+                  {/* Action Buttons */}
+                  <div className="flex items-center gap-2">
+                    <AppLink
+                      href={project.github_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-medium rounded-lg bg-card/60 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all duration-200"
                     >
-                      <span className="relative inline-flex items-center">
-                        {project.project_name}
-                        <MotionDiv 
-                          variant="fade"
-                          initial={{ width: 0 }}
-                          whileHover={{ width: "100%" }}
-                          transition={{ duration: 0.3 }}
-                          className="absolute -bottom-0.5 left-0 h-[1px] bg-gradient-to-r from-primary/50 to-primary"
-                        />
-                      </span>
-                    </MotionDiv>
+                      <Github className="w-3 h-3" />
+                      Source
+                    </AppLink>
+                    {project.project_link && (
+                      <AppLink
+                        href={project.project_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary/15 transition-all duration-200"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        Live
+                      </AppLink>
+                    )}
+                    <AppLink
+                      href={`/projects/${project.slug}`}
+                      className="inline-flex items-center gap-1 px-3 py-1.5 text-[11px] font-medium rounded-lg text-muted-foreground hover:text-foreground transition-colors duration-200"
+                    >
+                      Details
+                      <ArrowRight className="w-3 h-3" />
+                    </AppLink>
                   </div>
-                  <MotionDiv 
-                    variant="fade"
-                    className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                  >
-                    <div className="relative">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary/30" />
-                      <div className="absolute -inset-1 rounded-full bg-primary/10 blur-sm group-hover:bg-primary/20 transition-all duration-300" />
-                    </div>
-                  </MotionDiv>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {project.project_detail[0]}
+                </p>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-1.5">
+                  {project.techstack.map((tech, i) => (
+                    <MotionDiv
+                      key={i}
+                      variant="fade"
+                      transition={{ delay: 0.05 * i }}
+                      className="px-2 py-0.5 text-[10px] font-medium rounded-md bg-card/60 border border-border/30 text-muted-foreground/80"
+                    >
+                      {tech}
+                    </MotionDiv>
+                  ))}
                 </div>
               </div>
-            </div>
-            <div className="p-6">
-              <AnimatePresence mode="wait">
-                <MotionDiv 
-                  key="description"
-                  variant="fade"
-                  className="text-muted-foreground mb-4"
-                >
-                  {project.project_detail[0]}
-                </MotionDiv>
-              </AnimatePresence>
-              <MotionDiv 
-                variant="fade"
-                className="flex flex-wrap gap-2 mb-4"
-              >
-                {project.techstack.map((tech, i) => (
-                  <MotionDiv
-                    key={i}
-                    variant="fade"
-                    transition={{ delay: 0.4 + i * 0.1 }}
-                    className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
-                  >
-                    {tech}
-                  </MotionDiv>
-                ))}
-              </MotionDiv>
-              <MotionDiv 
-                variant="fade"
-                className="flex gap-4"
-              >
-                <AppLink
-                  href={project.github_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Github className="w-5 h-5" />
-                  <span>Code</span>
-                </AppLink>
-                <AppLink
-                  href={`/projects/${project.slug}`}
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <project.icon className="w-5 h-5" />
-                  <span>Description</span>
-                </AppLink>
-              </MotionDiv>
             </div>
           </MotionDiv>
         ))}
       </MotionDiv>
     </MotionDiv>
-  );
-} 
+  )
+}

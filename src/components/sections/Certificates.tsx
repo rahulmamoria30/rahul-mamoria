@@ -1,82 +1,88 @@
-"use client";
-import Image from "next/image";
+"use client"
+import Image from "next/image"
 
 const certificates = [
   {
     title: "Google Cloud Digital Leader",
     image: "/images/certificates/gcp_certificate.jpg",
-    issuer: "Google Cloud"
+    issuer: "Google Cloud",
   },
   {
     title: "React Developer Certification",
     image: "/images/certificates/React_certificate.jpg",
-    issuer: "Udemy"
+    issuer: "Udemy",
   },
   {
     title: "Angular Developer Certification",
     image: "/images/certificates/Angular_certificate.jpg",
-    issuer: "Udemy"
+    issuer: "Udemy",
   },
-  { 
+  {
     title: "Jest Unit Testing",
     image: "/images/certificates/unit_testing.jpg",
-    issuer: "Udemy"
+    issuer: "Udemy",
   },
   {
     title: "Typescript Unit Testing",
     image: "/images/certificates/Typescript_certificate.jpg",
-    issuer: "Udemy"
-  }
-];
+    issuer: "Udemy",
+  },
+]
 
 export function Certificates() {
   return (
     <section id="certificates" className="py-24 scroll-mt-24 overflow-hidden">
       <div className="container mx-auto px-4">
-        {/* <SectionTitle icon={Award} title="Certificates" /> */}
-        
         <div className="mt-12 relative">
-          <div className="flex animate-scroll gap-8">
+          <div className="flex animate-scroll gap-5">
             {/* First set of certificates */}
             {certificates.map((cert, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 w-80 bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border"
+                className="group flex-shrink-0 w-72 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50 p-4 hover:border-primary/30 transition-all duration-300"
               >
-                <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+                <div className="relative w-full h-44 mb-3 rounded-lg overflow-hidden">
                   <Image
                     src={cert.image}
                     alt={cert.title}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{cert.title}</h3>
-                <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                <h3 className="text-sm font-semibold text-foreground/90 mb-1">
+                  {cert.title}
+                </h3>
+                <p className="text-xs text-muted-foreground/70">
+                  {cert.issuer}
+                </p>
               </div>
             ))}
-            
+
             {/* Duplicate set for continuous scroll */}
             {certificates.map((cert, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 w-80 bg-card/50 backdrop-blur-sm rounded-lg p-4 border border-border"
+                className="group flex-shrink-0 w-72 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50 p-4 hover:border-primary/30 transition-all duration-300"
               >
-                <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+                <div className="relative w-full h-44 mb-3 rounded-lg overflow-hidden">
                   <Image
                     src={cert.image}
                     alt={cert.title}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{cert.title}</h3>
-                <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                <h3 className="text-sm font-semibold text-foreground/90 mb-1">
+                  {cert.title}
+                </h3>
+                <p className="text-xs text-muted-foreground/70">
+                  {cert.issuer}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  );
-} 
+  )
+}
