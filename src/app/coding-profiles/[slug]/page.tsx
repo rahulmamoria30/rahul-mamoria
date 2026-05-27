@@ -11,7 +11,6 @@ import {
   Flame,
   Award,
   Hash,
-  Loader2,
   Eye,
   MessageSquare,
   Star,
@@ -60,6 +59,7 @@ interface LeetCodeData {
   }[]
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface CodeforcesData {
   handle: string
   rating: number
@@ -668,111 +668,7 @@ function LeetCodeStats({ username }: { username: string }) {
   )
 }
 
-function CodeforcesStats({ handle }: { handle: string }) {
-  const [data, setData] = useState<CodeforcesData | null>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetch(`/api/coding-profiles/codeforces/${handle}`)
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => {})
-      .finally(() => setLoading(false))
-  }, [handle])
-
-  if (loading) return <LoadingState />
-  if (!data) return <ErrorState />
-
-  const rankColor = getRankColor(data.rank)
-
-  return (
-    <div className="space-y-6">
-      {/* Stats Overview */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <StatCard icon={Trophy} label="Rating" value={data.rating} />
-        <StatCard icon={Flame} label="Max Rating" value={data.maxRating} />
-        <StatCard
-          icon={Award}
-          label="Rank"
-          value={capitalize(data.rank)}
-          valueColor={rankColor}
-        />
-        <StatCard
-          icon={Target}
-          label="Contribution"
-          value={
-            data.contribution > 0 ? `+${data.contribution}` : data.contribution
-          }
-        />
-      </div>
-
-      {/* Rank Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 p-5 sm:p-6"
-      >
-        <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-4">
-          Rating Details
-        </p>
-        <div className="flex items-center gap-6">
-          <div>
-            <div className={`text-3xl font-bold ${rankColor}`}>
-              {data.rating}
-            </div>
-            <div className="text-sm text-muted-foreground">
-              Current:{" "}
-              <span className={rankColor}>{capitalize(data.rank)}</span>
-            </div>
-          </div>
-          <div className="h-12 w-px bg-border/50" />
-          <div>
-            <div className="text-3xl font-bold text-muted-foreground/60">
-              {data.maxRating}
-            </div>
-            <div className="text-sm text-muted-foreground">
-              Max: {capitalize(data.maxRank)}
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Recent Contests */}
-      {data.recentContests.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 p-5 sm:p-6"
-        >
-          <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-4">
-            Recent Contests
-          </p>
-          <div className="space-y-3">
-            {data.recentContests.map((contest, idx) => (
-              <div
-                key={idx}
-                className="flex items-center justify-between py-2 border-b border-border/30 last:border-0"
-              >
-                <span className="text-sm text-foreground/80 truncate pr-4">
-                  {contest.contestName}
-                </span>
-                <div className="flex items-center gap-4 flex-shrink-0 text-sm">
-                  <span className="text-muted-foreground">#{contest.rank}</span>
-                  <span className="font-medium text-foreground">
-                    {contest.newRating}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      )}
-    </div>
-  )
-}
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function GFGStats({ username }: { username: string }) {
   const [data, setData] = useState<GFGData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -908,6 +804,7 @@ function GFGStats({ username }: { username: string }) {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function CodeChefStats({ username }: { username: string }) {
   const [data, setData] = useState<CodeChefData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -1100,6 +997,7 @@ function ErrorState() {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getRankColor(rank: string): string {
   const r = rank.toLowerCase()
   if (r.includes("legendary") || r.includes("international grandmaster"))
@@ -1114,6 +1012,7 @@ function getRankColor(rank: string): string {
   return "text-muted-foreground"
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function capitalize(s: string) {
   return s
     .split(" ")

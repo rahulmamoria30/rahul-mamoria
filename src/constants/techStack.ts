@@ -12,12 +12,9 @@ import {
   SiMysql,
   SiGit,
   SiDocker,
-  SiAmazonwebservices,
-  SiRedis,
   SiJest,
   SiHtml5,
   SiCss3,
-  SiFirebase,
   SiGraphql,
 } from "react-icons/si"
 import { FaJava } from "react-icons/fa"

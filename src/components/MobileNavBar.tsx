@@ -1,15 +1,9 @@
 "use client"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetTitle,
-} from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Home, Briefcase, FolderGit2, Mail, Menu, Youtube } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { AppLink } from "@/components/ui/link"
 import { MobileSidebar } from "@/components/MobileSidebar"
 
 const navItems = [
@@ -69,25 +63,25 @@ export function MobileNavBar() {
           </Sheet>
         </div>
         {/* Nav icons */}
-        <div className="flex items-center gap-4 py-1">
-          {navItems.map((item) => (
-            <AppLink
-              key={item.href}
-              href={item.href}
-              icon={<item.icon className="h-5 w-5" />}
-              className={`flex items-center justify-center p-2 rounded-full transition-all duration-200 hover:bg-accent hover:text-accent-foreground ${
-                activeHash === item.href ||
-                activeHash === item.href.replace("/", "")
-                  ? "bg-accent text-accent-foreground"
-                  : ""
-              }`}
-              onClick={(e) => handleClick(e, item.href)}
-              active={
-                activeHash === item.href ||
-                activeHash === item.href.replace("/", "")
-              }
-            />
-          ))}
+        <div className="flex items-center justify-center gap-4 py-1">
+          {navItems.map((item) => {
+            const isActive =
+              activeHash === item.href ||
+              activeHash === item.href.replace("/", "")
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className={`flex items-center justify-center h-9 w-9 rounded-full transition-all duration-200 hover:bg-accent hover:text-accent-foreground ${
+                  isActive ? "bg-accent text-accent-foreground" : ""
+                }`}
+                onClick={(e) => handleClick(e, item.href)}
+                aria-label={item.label}
+              >
+                <item.icon className="h-5 w-5" />
+              </a>
+            )
+          })}
         </div>
       </div>
     </div>

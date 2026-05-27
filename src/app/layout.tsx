@@ -7,12 +7,61 @@ import { Background } from "@/components/Background"
 import { TopNav } from "@/components/TopNav"
 import { Footer } from "@/components/Footer"
 import { MobileNavBar } from "@/components/MobileNavBar"
+import { ScrollToTop } from "@/components/ScrollToTop"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Rahul Mamoria",
-  description: "Full Stack Developer",
+  title: {
+    default: "Rahul Mamoria | Software Developer",
+    template: "%s | Rahul Mamoria",
+  },
+  description:
+    "Software Developer at Grid Dynamics. Building scalable web apps with React, Next.js, and TypeScript. NIT Calicut alumnus.",
+  keywords: [
+    "Rahul Mamoria",
+    "Software Developer",
+    "Frontend Engineer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Grid Dynamics",
+  ],
+  authors: [{ name: "Rahul Mamoria" }],
+  creator: "Rahul Mamoria",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://rahulmamoria.vercel.app",
+    siteName: "Rahul Mamoria",
+    title: "Rahul Mamoria | Software Developer",
+    description:
+      "Software Developer at Grid Dynamics. Building scalable web apps with React, Next.js, and TypeScript.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Rahul Mamoria - Software Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rahul Mamoria | Software Developer",
+    description:
+      "Software Developer at Grid Dynamics. Building scalable web apps with React, Next.js, and TypeScript.",
+    creator: "@rahul_rm__",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: [
       {
@@ -83,6 +132,7 @@ export default function RootLayout({
             </div>
           </div>
           <MobileNavBar />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

@@ -5,6 +5,7 @@ import { TechStack } from "@/components/sections/TechStack"
 import { Experience } from "@/components/sections/Experience"
 import { Projects } from "@/components/sections/Projects"
 import { Certificates } from "@/components/sections/Certificates"
+import { Recommendations } from "@/components/sections/Recommendations"
 import { Contact } from "@/components/sections/Contact"
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Experience />
       <Projects />
       <Certificates />
+      <Recommendations />
       <Contact />
     </main>
   )

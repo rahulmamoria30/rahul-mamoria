@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "assets.leetcode.com",
       },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.hashnode.com",
+      },
     ],
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
