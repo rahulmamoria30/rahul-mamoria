@@ -1,0 +1,292 @@
+{
+  "personal": {
+    "name": "Rahul Mamoria",
+    "role": "Software Engineer",
+    "location": "Hyderabad, India",
+    "hometown": "Jaipur, Rajasthan",
+    "status": "Open to work",
+    "summary": "Fullstack engineer with expertise in React, Next.js, and Node.js — currently building self-service developer platforms at Grid Dynamics. Passionate about clean architecture, great UX, and shipping fast.",
+    "greeting": "नमस्ते !",
+    "tagline": "I build products that people love to use.",
+    "blog": "https://rahulmamoria.hashnode.dev/",
+    "youtube": "https://www.youtube.com/@rahul_rm__"
+  },
+  "social_links": {
+    "github": "https://github.com/rahulmamoria30",
+    "linkedin": "https://linkedin.com/in/rahulmm07",
+    "twitter": "https://twitter.com/rahul_rm__",
+    "instagram": "https://instagram.com/rahul_rm__",
+    "youtube": "https://www.youtube.com/@rahul_rm__",
+    "blog": "https://rahulmamoria.hashnode.dev/"
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "field": "Civil Engineering",
+      "school": "National Institute of Technology Calicut",
+      "year": "2019 - 2023"
+    },
+    {
+      "degree": "High School (12th)",
+      "field": "Physics, Chemistry, Mathematics",
+      "school": "RBSE Board",
+      "year": "2016 - 2018"
+    },
+    {
+      "degree": "Secondary School (10th)",
+      "field": "General Course Work",
+      "school": "RBSE Board",
+      "year": "2011 - 2016"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Grid Dynamics",
+      "period": "Sept 2023 - Present",
+      "type": "Full-time",
+      "projects": [
+        {
+          "name": "Ford Motor Company — Platform Engineering Team",
+          "description": [
+            "Led frontend development for a self-service CI/CD platform, simplifying cloud and deployment workflows for 200+ developers through intuitive dashboards.",
+            "Designed scalable backend APIs integrating enterprise DevOps tools, deployment pipelines, and infrastructure services.",
+            "Built reusable React components and scalable fullstack modules, reducing development effort by 30% and improving feature delivery speed.",
+            "Collaborated with platform engineering teams to improve developer onboarding, automation, and platform usability."
+          ]
+        },
+        {
+          "name": "Mars Petcare — Care Development",
+          "description": [
+            "Developed backend workflows and RESTful APIs for a Campaigns Manager platform managing 12+ healthcare SDKs, including dog poop scan and tooth scan features.",
+            "Automated SDK build pipelines and JavaScript bundle generation, improving release efficiency and maintainability.",
+            "Engineered reusable React and Ant Design components, improving development efficiency by 33% and reducing rendering time by 22%.",
+            "Achieved 83%+ test coverage using Vitest, reducing regression issues by 35%."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "Flyzy",
+      "period": "Jun 2023 - Aug 2023",
+      "type": "Internship",
+      "description": [
+        "Integrated external APIs with MongoDB: Efficiently connected external APIs to MongoDB, optimizing data fetching and management processes.",
+        "Designed and implemented core application logic, database management, and API integrations to enhance back-end performance and streamline data handling.",
+        "Optimized database queries and indexing to improve data retrieval speed and reduce latency in API responses, ensuring a seamless user experience."
+      ]
+    }
+  ],
+  "skills": {
+    "programming_languages": [
+      { "name": "Java", "level": 70 },
+      { "name": "C++", "level": 80 },
+      { "name": "JavaScript", "level": 80 },
+      { "name": "Python", "level": 50 }
+    ],
+    "system_design": [
+      { "name": "OOPS (Java)", "level": 80 },
+      { "name": "DBMS", "level": 75 },
+      { "name": "Design Patterns", "level": 85 }
+    ],
+    "web_development": [
+      { "name": "HTML", "level": 95 },
+      { "name": "CSS", "level": 95 },
+      { "name": "React.js", "level": 90 },
+      { "name": "Unit Testing", "level": 85 },
+      { "name": "Spring Boot", "level": 65 },
+      { "name": "MongoDB", "level": 60 }
+    ],
+    "certifications_and_problem_solving": [
+      { "name": "JavaScript", "level": 90 },
+      { "name": "React.js", "level": 90 },
+      { "name": "Next.js", "level": 85 },
+      { "name": "Google Digital Leader", "level": 90 }
+    ]
+  },
+  "tech_stack": {
+    "frontend": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3"
+    ],
+    "backend": ["Node.js", "Express", "Java", "Python", "GraphQL"],
+    "database_and_cloud": ["MongoDB", "PostgreSQL", "MySQL"],
+    "tools": ["Git", "Docker", "Jest"]
+  },
+  "projects": [
+    {
+      "name": "Software Unit Testing",
+      "description": "An AI-powered unit test generator that automates test case creation for Java and Python codebases. The tool analyzes code repositories, generates comprehensive test cases, and provides detailed reports, significantly reducing manual testing effort while improving code coverage and quality.",
+      "tech_stack": [
+        "Java",
+        "Python",
+        "React",
+        "JavaScript",
+        "LLM (Language Model)"
+      ],
+      "github": "https://github.com/rahulmamoria30/software_unit_testing",
+      "impact": [
+        "Reduced testing time by 70%",
+        "Improved code coverage by 40%",
+        "Enhanced test quality and reliability"
+      ]
+    },
+    {
+      "name": "YouTube Clone",
+      "description": "A feature-rich YouTube clone that replicates core functionalities including video search, playback, and detailed video information display. Built with responsive design principles and integrated with the YouTube Data API for real-time content delivery.",
+      "tech_stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "YouTube API",
+        "Responsive Design"
+      ],
+      "live_link": "https://rahulmmyoutubeclone.netlify.app/",
+      "github": "https://github.com/rahulmamoria30/youtube-clone"
+    },
+    {
+      "name": "E-commerce Platform",
+      "description": "A modern e-commerce platform built with Next.js and MongoDB, featuring product listings, user authentication, shopping cart functionality, and secure payment integration.",
+      "tech_stack": ["Next.js", "React", "Node.js", "MongoDB", "JWT", "Stripe"],
+      "github": "https://github.com/rmamoria/shopify"
+    }
+  ],
+  "hackathon": {
+    "event": "Grid Dynamics Hackathon 2025",
+    "result": "Winner",
+    "project": "AI-Based Recruitment System",
+    "description": "Built an AI-powered recruitment system that automates resume matching, candidate shortlisting, assessment generation, behavioral analysis, and interview scheduling.",
+    "steps": [
+      "Real Business Scenario Application — Candidate applies via the Grid Dynamics Careers page.",
+      "AI-Based Resume Matching — AI compares the candidate's resume with job description and generates a fitment score.",
+      "Shortlisting — If the fitment score meets criteria, candidate moves to next round.",
+      "Assessment Questions — AI generates pre-screening questions for assessments.",
+      "Behavioral Analysis — Tracks candidate performance (time taken, tab switching, copy-paste analysis).",
+      "Interview Scheduling and Transcript Analysis — Interviews scheduled automatically, AI analyzes transcripts."
+    ]
+  },
+  "coding_profiles": [
+    {
+      "platform": "LeetCode",
+      "url": "https://leetcode.com/u/rahul_rm__/",
+      "username": "rahul_rm__"
+    },
+    {
+      "platform": "GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/user/rahulmamoria/",
+      "username": "rahulmamoria"
+    },
+    {
+      "platform": "CodeChef",
+      "url": "https://www.codechef.com/users/rahulrm_903",
+      "username": "rahulrm_903"
+    },
+    {
+      "platform": "Codeforces",
+      "url": "https://codeforces.com/profile/rahul_rm__",
+      "username": "rahul_rm__"
+    }
+  ],
+  "hobbies": [
+    "Coding",
+    "Reading",
+    "Photography",
+    "Travel",
+    "Music",
+    "Vlogging"
+  ],
+  "books": {
+    "favorites": [
+      { "title": "Gunaho Ka Devta", "author": "Dharamvir Bharti" },
+      { "title": "One Arranged Murder", "author": "Chetan Bhagat" }
+    ],
+    "read": [
+      { "title": "Ret Ki Machhli", "author": "Kanta Bharati" },
+      { "title": "Godan", "author": "Munshi Premchand" },
+      { "title": "Nirmala", "author": "Munshi Premchand" },
+      { "title": "Idgah", "author": "Munshi Premchand" }
+    ]
+  },
+  "vlogs": {
+    "channel": "https://www.youtube.com/@rahul_rm__",
+    "description": "I share vlogs about my daily life, travel adventures, music, and everything in between.",
+    "videos": [
+      {
+        "title": "Sree Jagannath Temple Tour, Hyderabad | Vlog 01",
+        "date": "Sep 2024"
+      },
+      {
+        "title": "Ganpati Visarjan in Hyderabad | Vlog 02",
+        "date": "Sep 2024"
+      },
+      { "title": "Kyu Rabba - Created by Rahul Mamoria", "date": "2024" }
+    ]
+  },
+  "recommendations": [
+    {
+      "name": "Nandhini Boddu",
+      "role": "Data Scientist | GenAI & LLM Engineer",
+      "company": "Grid Dynamics",
+      "text": "I had the pleasure of working with Rahul Mamoria at Grid Dynamics, where he played a crucial role as a Frontend Engineer on our project. His technical expertise, attention to detail, and problem-solving skills made a significant impact on the team's success. Rahul is highly proficient in modern frontend technologies and consistently delivered high-quality, scalable, and maintainable code."
+    }
+  ],
+  "journey": {
+    "paragraphs": [
+      "Born and raised in Jaipur, Rajasthan, I completed my schooling there before pursuing my passion for technology at the National Institute of Technology Calicut. My journey in software development began with a curiosity about how digital systems work.",
+      "After graduating from NIT Calicut, I joined Grid Dynamics as a Software Engineer, where I work on building scalable web applications using React, Next.js, and TypeScript. I also have experience with Node.js and Java for backend development.",
+      "I focus on writing clean, maintainable code while staying up-to-date with the latest industry trends and best practices."
+    ]
+  },
+  "certificates": [
+    {
+      "title": "Google Cloud Certified - Cloud Digital Leader",
+      "issuer": "Google Cloud",
+      "date": "February 5, 2024",
+      "expiration": "February 5, 2027",
+      "credential_id": "bff978b6ed804f11ba655f59c59e2c88",
+      "description": "Professional certification validating cloud computing knowledge including cloud concepts, Google Cloud products, and business use cases. Signed by Thomas Kurian, CEO of Google Cloud."
+    },
+    {
+      "title": "React - The Complete Guide 2024 (incl. React Router & Redux)",
+      "issuer": "Udemy",
+      "instructor": "Academind by Maximilian Schwarzmüller",
+      "date": "January 19, 2024",
+      "duration": "74.5 total hours",
+      "certificate_no": "UC-e5ec3283-88cd-474a-a215-981ce2777ede",
+      "description": "Comprehensive React.js course covering hooks, state management, React Router, Redux, and modern React patterns."
+    },
+    {
+      "title": "Angular - The Complete Guide (2024 Edition)",
+      "issuer": "Udemy",
+      "instructor": "Maximilian Schwarzmüller",
+      "date": "September 5, 2024",
+      "duration": "55.5 total hours",
+      "certificate_no": "UC-afbdb7be-2847-4ca4-ad82-7a9530b341f5",
+      "description": "Angular framework certification covering components, services, routing, RxJS, and enterprise application development."
+    },
+    {
+      "title": "Zero to Hero in Jest Unit and Integration Testing with React",
+      "issuer": "Udemy",
+      "instructor": "Obify Consulting",
+      "date": "June 25, 2024",
+      "duration": "3 total hours",
+      "certificate_no": "UC-ff4e8417-39cc-485f-bf20-e807526ff778",
+      "description": "Jest unit and integration testing with React, covering test-driven development, mocking, and code coverage."
+    },
+    {
+      "title": "Understanding TypeScript",
+      "issuer": "Udemy",
+      "instructor": "Maximilian Schwarzmüller",
+      "date": "January 24, 2024",
+      "duration": "15 total hours",
+      "certificate_no": "UC-a1014f43-1e6e-4c5e-88e6-ae495d37f3c7",
+      "description": "TypeScript course covering type system, generics, decorators, and advanced TypeScript patterns for large-scale applications."
+    }
+  ]
+}
