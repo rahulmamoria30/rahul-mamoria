@@ -8,6 +8,7 @@ import { TopNav } from "@/components/TopNav"
 import { Footer } from "@/components/Footer"
 import { MobileNavBar } from "@/components/MobileNavBar"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { Chatbot } from "@/components/Chatbot"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -133,6 +134,7 @@ export default function RootLayout({
           </div>
           <MobileNavBar />
           <ScrollToTop />
+          <Chatbot />
         </ThemeProvider>
       </body>
     </html>
